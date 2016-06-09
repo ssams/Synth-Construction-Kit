@@ -14,6 +14,7 @@
         <child id="1727705260352737649" name="connections" index="3o71IQ" />
         <child id="5138809161560906190" name="speaker" index="3O3eTU" />
       </concept>
+      <concept id="1727705260352466363" name="Synth.structure.RotaryKnob" flags="ng" index="3o6YtW" />
       <concept id="1727705260352466362" name="Synth.structure.Connection" flags="ng" index="3o6YtX">
         <reference id="5138809161560788531" name="source" index="3O2zA7" />
         <reference id="5138809161560788536" name="sink" index="3O2zAc" />
@@ -23,6 +24,13 @@
         <property id="1727705260354654846" name="max" index="37YlyT" />
         <property id="1727705260354654844" name="min" index="37YlyV" />
       </concept>
+      <concept id="1727705260352466360" name="Synth.structure.Control" flags="ng" index="3o6YtZ">
+        <property id="1727705260352719488" name="heigth" index="3o7W17" />
+        <property id="1727705260352719471" name="x" index="3o7W2C" />
+        <property id="1727705260352719473" name="y" index="3o7W2Q" />
+        <property id="1727705260352719480" name="width" index="3o7W2Z" />
+      </concept>
+      <concept id="1727705260352719499" name="Synth.structure.Slider" flags="ng" index="3o7W1c" />
       <concept id="1727705260352719319" name="Synth.structure.SawToothOscillator" flags="ng" index="3o7Wcg" />
       <concept id="1727705260352719347" name="Synth.structure.LinearConnection" flags="ng" index="3o7WcO" />
       <concept id="5138809161560788736" name="Synth.structure.ConnectionList" flags="ng" index="3O2zyO">
@@ -31,7 +39,9 @@
       <concept id="5138809161560788706" name="Synth.structure.SoundList" flags="ng" index="3O2z_m">
         <child id="5138809161560788734" name="sounds" index="3O2z_a" />
       </concept>
-      <concept id="5138809161560788674" name="Synth.structure.ControlList" flags="ng" index="3O2z_Q" />
+      <concept id="5138809161560788674" name="Synth.structure.ControlList" flags="ng" index="3O2z_Q">
+        <child id="5138809161560788702" name="controls" index="3O2z_E" />
+      </concept>
       <concept id="5138809161560904894" name="Synth.structure.Speaker" flags="ng" index="3O3eca" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -62,7 +72,22 @@
         <property role="37Ylx6" value="4000" />
       </node>
     </node>
-    <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL" />
+    <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL">
+      <node concept="3o6YtW" id="4tgHViNnoiw" role="3O2z_E">
+        <property role="TrG5h" value="knob" />
+        <property role="3o7W2C" value="28" />
+        <property role="3o7W2Q" value="21" />
+        <property role="3o7W2Z" value="100" />
+        <property role="3o7W17" value="51" />
+      </node>
+      <node concept="3o7W1c" id="2yFjXLyhW6Y" role="3O2z_E">
+        <property role="TrG5h" value="slider" />
+        <property role="3o7W2C" value="159" />
+        <property role="3o7W2Q" value="24" />
+        <property role="3o7W2Z" value="122" />
+        <property role="3o7W17" value="75" />
+      </node>
+    </node>
     <node concept="3O3eca" id="4tgHViNncq0" role="3O3eTU">
       <property role="TrG5h" value="speaker" />
     </node>
