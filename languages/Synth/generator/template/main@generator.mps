@@ -171,6 +171,9 @@
       <concept id="1138056022639" name="jetbrains.mps.lang.smodel.structure.SPropertyAccess" flags="nn" index="3TrcHB">
         <reference id="1138056395725" name="property" index="3TsBF5" />
       </concept>
+      <concept id="1138056143562" name="jetbrains.mps.lang.smodel.structure.SLinkAccess" flags="nn" index="3TrEf2">
+        <reference id="1138056516764" name="link" index="3Tt5mk" />
+      </concept>
       <concept id="1138056282393" name="jetbrains.mps.lang.smodel.structure.SLinkListAccess" flags="nn" index="3Tsc0h">
         <reference id="1138056546658" name="link" index="3TtcxE" />
       </concept>
@@ -310,11 +313,16 @@
             <node concept="3JmXsc" id="1vU2Gvg1im3" role="3Jn$fo">
               <node concept="3clFbS" id="1vU2Gvg1im4" role="2VODD2">
                 <node concept="3clFbF" id="1vU2Gvg1ima" role="3cqZAp">
-                  <node concept="2OqwBi" id="1vU2Gvg1im5" role="3clFbG">
-                    <node concept="3Tsc0h" id="1vU2Gvg1im8" role="2OqNvi">
-                      <ref role="3TtcxE" to="juyv:1vU2GvfTx5N" />
+                  <node concept="2OqwBi" id="4tgHViNmIt4" role="3clFbG">
+                    <node concept="2OqwBi" id="1vU2Gvg1im5" role="2Oq$k0">
+                      <node concept="3TrEf2" id="4tgHViNmIj2" role="2OqNvi">
+                        <ref role="3Tt5mk" to="juyv:1vU2GvfTx5N" />
+                      </node>
+                      <node concept="30H73N" id="1vU2Gvg1im9" role="2Oq$k0" />
                     </node>
-                    <node concept="30H73N" id="1vU2Gvg1im9" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="4tgHViNmIyA" role="2OqNvi">
+                      <ref role="3TtcxE" to="juyv:4tgHViNmCVY" />
+                    </node>
                   </node>
                 </node>
               </node>

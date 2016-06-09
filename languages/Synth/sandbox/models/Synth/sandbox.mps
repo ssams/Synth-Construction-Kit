@@ -13,13 +13,20 @@
         <child id="1727705260352737651" name="sounds" index="3o71IO" />
         <child id="1727705260352737649" name="connections" index="3o71IQ" />
       </concept>
+      <concept id="1727705260352466362" name="Synth.structure.Connection" flags="ng" index="3o6YtX">
+        <reference id="5138809161560788531" name="source" index="3O2zA7" />
+        <reference id="5138809161560788536" name="sink" index="3O2zAc" />
+      </concept>
       <concept id="1727705260352466361" name="Synth.structure.Sound" flags="ng" index="3o6YtY">
         <property id="1727705260354654849" name="default" index="37Ylx6" />
         <property id="1727705260354654846" name="max" index="37YlyT" />
         <property id="1727705260354654844" name="min" index="37YlyV" />
       </concept>
       <concept id="1727705260352719319" name="Synth.structure.SawToothOscillator" flags="ng" index="3o7Wcg" />
-      <concept id="5138809161560788736" name="Synth.structure.ConnectionList" flags="ng" index="3O2zyO" />
+      <concept id="1727705260352719347" name="Synth.structure.LinearConnection" flags="ng" index="3o7WcO" />
+      <concept id="5138809161560788736" name="Synth.structure.ConnectionList" flags="ng" index="3O2zyO">
+        <child id="5138809161560788764" name="connections" index="3O2zyC" />
+      </concept>
       <concept id="5138809161560788706" name="Synth.structure.SoundList" flags="ng" index="3O2z_m">
         <child id="5138809161560788734" name="sounds" index="3O2z_a" />
       </concept>
@@ -33,13 +40,24 @@
   </registry>
   <node concept="3o6LFc" id="1vU2GvfV3S4">
     <property role="TrG5h" value="Synth" />
-    <node concept="3O2zyO" id="4tgHViNmRXW" role="3o71IQ" />
+    <node concept="3O2zyO" id="4tgHViNmRXW" role="3o71IQ">
+      <node concept="3o7WcO" id="4tgHViNmZPz" role="3O2zyC">
+        <ref role="3O2zA7" node="4tgHViNmRY4" resolve="osc1" />
+        <ref role="3O2zAc" node="4tgHViNmZPH" resolve="osc2" />
+      </node>
+    </node>
     <node concept="3O2z_m" id="4tgHViNmRXY" role="3o71IO">
       <node concept="3o7Wcg" id="4tgHViNmRY4" role="3O2z_a">
-        <property role="TrG5h" value="osc" />
+        <property role="TrG5h" value="osc1" />
         <property role="37YlyV" value="1000" />
         <property role="37YlyT" value="4000" />
         <property role="37Ylx6" value="2500" />
+      </node>
+      <node concept="3o7Wcg" id="4tgHViNmZPH" role="3O2z_a">
+        <property role="TrG5h" value="osc2" />
+        <property role="37YlyV" value="3000" />
+        <property role="37YlyT" value="5000" />
+        <property role="37Ylx6" value="4000" />
       </node>
     </node>
     <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL" />
