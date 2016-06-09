@@ -19,6 +19,9 @@
         <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
+      <concept id="1169125989551" name="jetbrains.mps.lang.structure.structure.InterfaceConceptDeclaration" flags="ig" index="PlHQZ">
+        <child id="1169127546356" name="extends" index="PrDN$" />
+      </concept>
       <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
         <reference id="1169127628841" name="intfc" index="PrY4T" />
       </concept>
@@ -136,13 +139,13 @@
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="source" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
+      <ref role="20lvS9" node="4tgHViNn2Bn" resolve="ISoundSource" />
     </node>
     <node concept="1TJgyj" id="4tgHViNmCSS" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="sink" />
       <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
+      <ref role="20lvS9" node="4tgHViNn2BN" resolve="ISoundSink" />
     </node>
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQV">
@@ -156,6 +159,9 @@
     <property role="TrG5h" value="SawToothOscillator" />
     <property role="34LRSv" value="saw" />
     <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
+    <node concept="PrWs8" id="4tgHViNn2Cf" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1vU2GvfTsBN">
     <property role="1pbfSe" value="404761414" />
@@ -202,6 +208,20 @@
       <property role="20kJfa" value="connections" />
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="1vU2GvfSuQU" resolve="Connection" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="4tgHViNn2Bn">
+    <property role="1pbfSe" value="89333365" />
+    <property role="TrG5h" value="ISoundSource" />
+    <node concept="PrWs8" id="4tgHViNn35V" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="4tgHViNn2BN">
+    <property role="1pbfSe" value="89333337" />
+    <property role="TrG5h" value="ISoundSink" />
+    <node concept="PrWs8" id="4tgHViNn35T" role="PrDN$">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>
