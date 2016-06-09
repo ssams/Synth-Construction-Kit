@@ -47,24 +47,25 @@
     <property role="1pbfSe" value="405071150" />
     <property role="TrG5h" value="Synthesizer" />
     <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="synthesizer" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1vU2GvfTx5L" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="connections" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1vU2GvfSuQU" resolve="Connections" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4tgHViNmCW0" resolve="ConnectionList" />
     </node>
     <node concept="1TJgyj" id="1vU2GvfTx5N" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="sounds" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4tgHViNmCVy" resolve="SoundList" />
     </node>
     <node concept="1TJgyj" id="1vU2GvfTx5Q" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="controls" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1vU2GvfSuQS" resolve="Controls" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4tgHViNmCV2" resolve="ControlList" />
     </node>
     <node concept="PrWs8" id="1vU2GvfSh0c" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -75,21 +76,9 @@
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQS">
     <property role="1pbfSe" value="405014401" />
-    <property role="TrG5h" value="Controls" />
+    <property role="TrG5h" value="Control" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1vU2GvfUhmp" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20lbJX" value="0..n" />
-      <property role="20kJfa" value="slider" />
-      <ref role="20lvS9" node="1vU2GvfTsEb" resolve="Slider" />
-    </node>
-    <node concept="1TJgyj" id="1vU2GvfUhmr" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="rotaryKnob" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1vU2GvfSuQV" resolve="RotaryKnob" />
-    </node>
     <node concept="1TJgyi" id="1vU2GvfTsDJ" role="1TKVEl">
       <property role="TrG5h" value="x" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
@@ -109,6 +98,11 @@
     <node concept="PrWs8" id="1vU2GvfUkdC" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+    <node concept="1TJgyj" id="4tgHViNmXwe" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="sound" />
+      <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
+    </node>
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQT">
     <property role="1pbfSe" value="405014400" />
@@ -116,12 +110,6 @@
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1vU2GvfUhmu" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="sawToothOscillator" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1vU2GvfTsBn" resolve="SawToothOscillator" />
-    </node>
     <node concept="PrWs8" id="1vU2Gvg0P5S" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
@@ -140,37 +128,28 @@
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQU">
     <property role="1pbfSe" value="405014399" />
-    <property role="TrG5h" value="Connections" />
+    <property role="TrG5h" value="Connection" />
     <property role="R5$K7" value="true" />
     <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="1vU2GvfUhmn" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="linearConnection" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="1vU2GvfTsBN" resolve="LinearConnection" />
-    </node>
-    <node concept="1TJgyj" id="1vU2Gvg0R7I" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="control" />
-      <property role="20lbJX" value="1" />
-      <ref role="20lvS9" node="1vU2GvfSuQS" resolve="Controls" />
-    </node>
-    <node concept="1TJgyj" id="1vU2Gvg0R7L" role="1TKVEi">
-      <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="sound" />
+    <node concept="1TJgyj" id="4tgHViNmCSN" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="source" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
     </node>
-    <node concept="PrWs8" id="1vU2Gvg0R7i" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="1TJgyj" id="4tgHViNmCSS" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="sink" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
     </node>
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQV">
     <property role="1pbfSe" value="405014398" />
     <property role="TrG5h" value="RotaryKnob" />
     <property role="34LRSv" value="rotary" />
-    <ref role="1TJDcQ" node="1vU2GvfSuQS" resolve="Controls" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQS" resolve="Control" />
   </node>
   <node concept="1TIwiD" id="1vU2GvfTsBn">
     <property role="1pbfSe" value="404761442" />
@@ -181,13 +160,49 @@
   <node concept="1TIwiD" id="1vU2GvfTsBN">
     <property role="1pbfSe" value="404761414" />
     <property role="TrG5h" value="LinearConnection" />
-    <ref role="1TJDcQ" node="1vU2GvfSuQU" resolve="Connections" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQU" resolve="Connection" />
   </node>
   <node concept="1TIwiD" id="1vU2GvfTsEb">
     <property role="1pbfSe" value="404761262" />
     <property role="TrG5h" value="Slider" />
     <property role="34LRSv" value="slider" />
-    <ref role="1TJDcQ" node="1vU2GvfSuQS" resolve="Controls" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQS" resolve="Control" />
+  </node>
+  <node concept="1TIwiD" id="4tgHViNmCV2">
+    <property role="1pbfSe" value="89438602" />
+    <property role="TrG5h" value="ControlList" />
+    <property role="34LRSv" value="controls" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4tgHViNmCVu" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="controls" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1vU2GvfSuQS" resolve="Control" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgHViNmCVy">
+    <property role="1pbfSe" value="89438570" />
+    <property role="TrG5h" value="SoundList" />
+    <property role="34LRSv" value="sounds" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4tgHViNmCVY" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="sounds" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgHViNmCW0">
+    <property role="1pbfSe" value="89438540" />
+    <property role="TrG5h" value="ConnectionList" />
+    <property role="34LRSv" value="connections" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4tgHViNmCWs" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="connections" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="1vU2GvfSuQU" resolve="Connection" />
+    </node>
   </node>
 </model>
 
