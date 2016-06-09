@@ -68,12 +68,32 @@
           <property role="VOm3f" value="true" />
         </node>
       </node>
-      <node concept="3F1sOY" id="4tgHViNmDdF" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:1vU2GvfTx5N" />
-        <node concept="ljvvj" id="4tgHViNmDel" role="3F10Kt">
+      <node concept="3F0ifn" id="4tgHViNn5C1" role="3EZMnx">
+        <property role="3F0ifm" value="line out:" />
+        <node concept="lj46D" id="4tgHViNn5ER" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+      </node>
+      <node concept="3F1sOY" id="4tgHViNn9sX" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:4tgHViNn5Be" />
+        <node concept="ljvvj" id="4tgHViNn9u6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="35HoNQ" id="4tgHViNn5Fi" role="3EZMnx">
+        <node concept="ljvvj" id="4tgHViNn5Gu" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="4tgHViNmDdF" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:1vU2GvfTx5N" />
         <node concept="lj46D" id="4tgHViNmDfF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pVoyu" id="4tgHViNn5Gx" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="ljvvj" id="4tgHViNn5G$" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -363,6 +383,12 @@
         </node>
       </node>
       <node concept="2iRfu4" id="4tgHViNmXzT" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="4tgHViNn9ud">
+    <ref role="1XX52x" to="juyv:4tgHViNn5iY" resolve="Speaker" />
+    <node concept="3F0A7n" id="4tgHViNn9uE" role="2wV5jI">
+      <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
     </node>
   </node>
 </model>

@@ -52,6 +52,12 @@
     <property role="19KtqR" value="true" />
     <property role="34LRSv" value="synthesizer" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4tgHViNn5Be" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="speaker" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4tgHViNn5iY" resolve="Speaker" />
+    </node>
     <node concept="1TJgyj" id="1vU2GvfTx5L" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="connections" />
@@ -222,6 +228,14 @@
     <property role="TrG5h" value="ISoundSink" />
     <node concept="PrWs8" id="4tgHViNn35T" role="PrDN$">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4tgHViNn5iY">
+    <property role="1pbfSe" value="89322382" />
+    <property role="TrG5h" value="Speaker" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="4tgHViNn5jq" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2BN" resolve="ISoundSink" />
     </node>
   </node>
 </model>

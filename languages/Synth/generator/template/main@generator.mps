@@ -127,6 +127,12 @@
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq">
+        <property id="6329021646629104958" name="text" index="3SKdUp" />
+      </concept>
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
+      </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
       <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
@@ -360,7 +366,33 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="1vU2Gvg1xwp" role="3cqZAp" />
+        <node concept="3clFbH" id="4tgHViNn9LQ" role="3cqZAp" />
+        <node concept="3SKdUt" id="4tgHViNnicA" role="3cqZAp">
+          <node concept="3SKdUq" id="4tgHViNnicC" role="3SKWNk">
+            <property role="3SKdUp" value="connections" />
+          </node>
+          <node concept="1WS0z7" id="4tgHViNnilQ" role="lGtFl">
+            <node concept="3JmXsc" id="4tgHViNnilT" role="3Jn$fo">
+              <node concept="3clFbS" id="4tgHViNnilU" role="2VODD2">
+                <node concept="3clFbF" id="4tgHViNnim0" role="3cqZAp">
+                  <node concept="2OqwBi" id="4tgHViNniG5" role="3clFbG">
+                    <node concept="2OqwBi" id="4tgHViNnilV" role="2Oq$k0">
+                      <node concept="30H73N" id="4tgHViNnilZ" role="2Oq$k0" />
+                      <node concept="3TrEf2" id="4tgHViNniw4" role="2OqNvi">
+                        <ref role="3Tt5mk" to="juyv:1vU2GvfTx5L" />
+                      </node>
+                    </node>
+                    <node concept="3Tsc0h" id="4tgHViNniNV" role="2OqNvi">
+                      <ref role="3TtcxE" to="juyv:4tgHViNmCWs" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="29HgVG" id="4tgHViNniX1" role="lGtFl" />
+        </node>
+        <node concept="3clFbH" id="4tgHViNnhry" role="3cqZAp" />
         <node concept="3clFbF" id="1vU2GvfZHfP" role="3cqZAp">
           <node concept="1rXfSq" id="1vU2GvfZHfN" role="3clFbG">
             <ref role="37wK5l" to="z60i:~Container.validate():void" resolve="validate" />

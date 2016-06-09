@@ -12,6 +12,7 @@
         <child id="1727705260352737654" name="controls" index="3o71IL" />
         <child id="1727705260352737651" name="sounds" index="3o71IO" />
         <child id="1727705260352737649" name="connections" index="3o71IQ" />
+        <child id="5138809161560906190" name="speaker" index="3O3eTU" />
       </concept>
       <concept id="1727705260352466362" name="Synth.structure.Connection" flags="ng" index="3o6YtX">
         <reference id="5138809161560788531" name="source" index="3O2zA7" />
@@ -31,6 +32,7 @@
         <child id="5138809161560788734" name="sounds" index="3O2z_a" />
       </concept>
       <concept id="5138809161560788674" name="Synth.structure.ControlList" flags="ng" index="3O2z_Q" />
+      <concept id="5138809161560904894" name="Synth.structure.Speaker" flags="ng" index="3O3eca" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -43,7 +45,7 @@
     <node concept="3O2zyO" id="4tgHViNmRXW" role="3o71IQ">
       <node concept="3o7WcO" id="4tgHViNmZPz" role="3O2zyC">
         <ref role="3O2zA7" node="4tgHViNmRY4" resolve="osc1" />
-        <ref role="3O2zAc" node="4tgHViNmZPH" resolve="osc2" />
+        <ref role="3O2zAc" node="4tgHViNncq0" resolve="speaker" />
       </node>
     </node>
     <node concept="3O2z_m" id="4tgHViNmRXY" role="3o71IO">
@@ -61,6 +63,9 @@
       </node>
     </node>
     <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL" />
+    <node concept="3O3eca" id="4tgHViNncq0" role="3O3eTU">
+      <property role="TrG5h" value="speaker" />
+    </node>
   </node>
 </model>
 
