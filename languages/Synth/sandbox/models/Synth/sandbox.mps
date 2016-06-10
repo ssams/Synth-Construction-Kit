@@ -12,7 +12,6 @@
         <child id="1727705260352737654" name="controls" index="3o71IL" />
         <child id="1727705260352737651" name="sounds" index="3o71IO" />
         <child id="1727705260352737649" name="connections" index="3o71IQ" />
-        <child id="5138809161560906190" name="speaker" index="3O3eTU" />
       </concept>
       <concept id="1727705260352466363" name="Synth.structure.RotaryKnob" flags="ng" index="3o6YtW" />
       <concept id="1727705260352466362" name="Synth.structure.Connection" flags="ng" index="3o6YtX">
@@ -38,6 +37,7 @@
       </concept>
       <concept id="5138809161560788706" name="Synth.structure.SoundList" flags="ng" index="3O2z_m">
         <child id="5138809161560788734" name="sounds" index="3O2z_a" />
+        <child id="5138809161560906190" name="speaker" index="3O3eTU" />
       </concept>
       <concept id="5138809161560788674" name="Synth.structure.ControlList" flags="ng" index="3O2z_Q">
         <child id="5138809161560788702" name="controls" index="3O2z_E" />
@@ -55,7 +55,7 @@
     <node concept="3O2zyO" id="4tgHViNmRXW" role="3o71IQ">
       <node concept="3o7WcO" id="4tgHViNmZPz" role="3O2zyC">
         <ref role="3O2zA7" node="4tgHViNmRY4" resolve="osc1" />
-        <ref role="3O2zAc" node="4tgHViNncq0" resolve="speaker" />
+        <ref role="3O2zAc" node="3yVB6mnVis9" resolve="speaker" />
       </node>
     </node>
     <node concept="3O2z_m" id="4tgHViNmRXY" role="3o71IO">
@@ -71,25 +71,35 @@
         <property role="37YlyT" value="5000" />
         <property role="37Ylx6" value="4000" />
       </node>
+      <node concept="3O3eca" id="3yVB6mnVis9" role="3O3eTU">
+        <property role="TrG5h" value="speaker" />
+      </node>
     </node>
     <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL">
-      <node concept="3o6YtW" id="4tgHViNnoiw" role="3O2z_E">
-        <property role="TrG5h" value="knob" />
-        <property role="3o7W2C" value="28" />
-        <property role="3o7W2Q" value="21" />
+      <node concept="3o7W1c" id="3yVB6mnVize" role="3O2z_E">
+        <property role="3o7W2C" value="80" />
+        <property role="3o7W2Q" value="31" />
         <property role="3o7W2Z" value="100" />
-        <property role="3o7W17" value="51" />
+        <property role="3o7W17" value="100" />
       </node>
-      <node concept="3o7W1c" id="2yFjXLyhW6Y" role="3O2z_E">
-        <property role="TrG5h" value="slider" />
-        <property role="3o7W2C" value="159" />
-        <property role="3o7W2Q" value="24" />
-        <property role="3o7W2Z" value="122" />
-        <property role="3o7W17" value="75" />
+      <node concept="3o7W1c" id="3yVB6mnVizh" role="3O2z_E">
+        <property role="3o7W2C" value="342" />
+        <property role="3o7W2Q" value="58" />
+        <property role="3o7W2Z" value="100" />
+        <property role="3o7W17" value="100" />
       </node>
-    </node>
-    <node concept="3O3eca" id="4tgHViNncq0" role="3O3eTU">
-      <property role="TrG5h" value="speaker" />
+      <node concept="3o6YtW" id="3yVB6mnVizm" role="3O2z_E">
+        <property role="3o7W2C" value="38" />
+        <property role="3o7W2Q" value="162" />
+        <property role="3o7W2Z" value="113" />
+        <property role="3o7W17" value="115" />
+      </node>
+      <node concept="3o6YtW" id="3yVB6mnWRC6" role="3O2z_E">
+        <property role="3o7W2Z" value="100" />
+        <property role="3o7W17" value="100" />
+        <property role="3o7W2C" value="211" />
+        <property role="3o7W2Q" value="100" />
+      </node>
     </node>
   </node>
 </model>
