@@ -94,5 +94,11 @@
       </node>
     </node>
   </node>
+  <node concept="13h7C7" id="7BQCCwpNXjb">
+    <ref role="13h7C2" to="juyv:7BQCCwpMmkB" resolve="UnitOscillator" />
+    <node concept="13hLZK" id="7BQCCwpNXjc" role="13h7CW">
+      <node concept="3clFbS" id="7BQCCwpNXjd" role="2VODD2" />
+    </node>
+  </node>
 </model>
 

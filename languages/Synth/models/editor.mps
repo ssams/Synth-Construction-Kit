@@ -54,6 +54,10 @@
         <property id="168363875802087287" name="showInUI" index="2gpH_U" />
         <property id="5944657839012629576" name="presentation" index="2BUmq6" />
       </concept>
+      <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW" />
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
+      </concept>
       <concept id="1186414536763" name="jetbrains.mps.lang.editor.structure.BooleanStyleSheetItem" flags="ln" index="VOi$J">
         <property id="1186414551515" name="flag" index="VOm3f" />
       </concept>
@@ -453,44 +457,8 @@
       <node concept="3F0ifn" id="1vU2Gvg0P5E" role="3EZMnx">
         <property role="3F0ifm" value="SawToothOscillator" />
       </node>
-      <node concept="3F0A7n" id="1vU2Gvg0P5U" role="3EZMnx">
-        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
-      </node>
-      <node concept="3F0ifn" id="1vU2Gvg0P6a" role="3EZMnx">
-        <property role="3F0ifm" value="min:" />
-        <node concept="pVoyu" id="1vU2Gvg0P8j" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="1vU2Gvg0P8m" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="1vU2Gvg0P6y" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:1vU2Gvg0P9W" resolve="min" />
-      </node>
-      <node concept="3F0ifn" id="1vU2Gvg0P6I" role="3EZMnx">
-        <property role="3F0ifm" value="max:" />
-        <node concept="pVoyu" id="1vU2Gvg0P86" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="1vU2Gvg0P89" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="1vU2Gvg0P6W" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:1vU2Gvg0P9Y" resolve="max" />
-      </node>
-      <node concept="3F0ifn" id="1vU2Gvg0P7c" role="3EZMnx">
-        <property role="3F0ifm" value="default:" />
-        <node concept="pVoyu" id="1vU2Gvg0P83" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="1vU2Gvg0P8e" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F0A7n" id="1vU2Gvg0P7u" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:1vU2Gvg0Pa1" resolve="default" />
+      <node concept="PMmxH" id="7BQCCwpM$4b" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
       </node>
       <node concept="l2Vlx" id="1vU2Gvg0P5A" role="2iSdaV" />
     </node>
@@ -528,7 +496,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="4tgHViNn5C1" role="3EZMnx">
-        <property role="3F0ifm" value="line out:" />
+        <property role="3F0ifm" value="LineOut:" />
         <node concept="lj46D" id="4tgHViNn5ER" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -567,6 +535,9 @@
           <property role="VOm3f" value="true" />
         </node>
         <node concept="lj46D" id="4tgHViNmXxK" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="pj6Ft" id="7BQCCwpNe5T" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -994,6 +965,375 @@
       <ref role="3uigEE" to="8tro:7CaZq42X0Ik" resolve="BoxFigure" />
     </node>
     <node concept="3FP93d" id="HEilRNywb_" role="lGtFl" />
+  </node>
+  <node concept="24kQdi" id="7BQCCwpLxMc">
+    <ref role="1XX52x" to="juyv:7BQCCwpLxLY" resolve="ImpulseOscillator" />
+    <node concept="3EZMnI" id="7BQCCwpLypU" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpLyq7" role="3EZMnx">
+        <property role="3F0ifm" value="ImpulseOscillator" />
+        <node concept="pVoyu" id="7BQCCwpLysp" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="PMmxH" id="7BQCCwpMmn4" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpLypX" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="7BQCCwpMmkV">
+    <property role="TrG5h" value="UnitOscillatorEditor" />
+    <ref role="1XX52x" to="juyv:7BQCCwpMmkB" resolve="UnitOscillator" />
+    <node concept="3EZMnI" id="7BQCCwpMmns" role="2wV5jI">
+      <node concept="l2Vlx" id="7BQCCwpMmnt" role="2iSdaV" />
+      <node concept="3F0A7n" id="7BQCCwpMmn_" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpMmnM" role="3EZMnx">
+        <property role="3F0ifm" value="min:" />
+        <node concept="pVoyu" id="7BQCCwpMmp3" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpMmpc" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpMmnW" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpMmkE" resolve="min" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpMmog" role="3EZMnx">
+        <property role="3F0ifm" value="max:" />
+        <node concept="pVoyu" id="7BQCCwpMmp6" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpMmph" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpMmos" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpMmkG" resolve="max" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpMmoE" role="3EZMnx">
+        <property role="3F0ifm" value="default:" />
+        <node concept="pVoyu" id="7BQCCwpMmp9" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpMmpm" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpMmoU" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpMmkJ" resolve="default" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpMVwA" role="3EZMnx">
+        <property role="3F0ifm" value="amplitude:" />
+        <node concept="pVoyu" id="7BQCCwpMVxn" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpMVxp" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpMVx6" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpMP_L" resolve="amplitude" />
+      </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpMDOf">
+    <ref role="1XX52x" to="juyv:7BQCCwpMDO9" resolve="PulseOscillator" />
+    <node concept="3EZMnI" id="7BQCCwpMDOh" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpMDOo" role="3EZMnx">
+        <property role="3F0ifm" value="PulseOscillator" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpMDOu" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpMDOk" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpMJBH">
+    <ref role="1XX52x" to="juyv:7BQCCwpMJBB" resolve="SineOscillator" />
+    <node concept="3EZMnI" id="7BQCCwpMJBJ" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpMJBQ" role="3EZMnx">
+        <property role="3F0ifm" value="SineOscillator" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpMJBW" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpMJBM" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpMJC5">
+    <ref role="1XX52x" to="juyv:7BQCCwpMJBZ" resolve="SquareOscillator" />
+    <node concept="3EZMnI" id="7BQCCwpMJC7" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpMJCe" role="3EZMnx">
+        <property role="3F0ifm" value="SquareOscillator" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpMJCk" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpMJCa" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpMJCt">
+    <ref role="1XX52x" to="juyv:7BQCCwpMJCn" resolve="TriangleOscillator" />
+    <node concept="3EZMnI" id="7BQCCwpMJCv" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpMJCD" role="3EZMnx">
+        <property role="3F0ifm" value="TriangleOscillator" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpMJCJ" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpMJCy" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="7BQCCwpN1yK">
+    <property role="TrG5h" value="TunableFilterEditor" />
+    <ref role="1XX52x" to="juyv:7BQCCwpN1yx" resolve="TunableFilter" />
+    <node concept="3EZMnI" id="7BQCCwpN1yM" role="2wV5jI">
+      <node concept="3F0A7n" id="7BQCCwpN1z1" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpN1zj" role="3EZMnx">
+        <property role="3F0ifm" value="frequency:" />
+        <node concept="pVoyu" id="7BQCCwpN1zy" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpN1z_" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpN1zt" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpN1zr" resolve="frequency" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpN1yP" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="PKFIW" id="7BQCCwpN1zT">
+    <property role="TrG5h" value="UnitFilterEditor" />
+    <ref role="1XX52x" to="juyv:7BQCCwpN1yj" resolve="UnitFilter" />
+    <node concept="3EZMnI" id="7BQCCwpN1zV" role="2wV5jI">
+      <node concept="3F0A7n" id="7BQCCwpN1$2" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpN1zY" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpN1$n">
+    <ref role="1XX52x" to="juyv:7BQCCwpN1$h" resolve="FilterOneZero" />
+    <node concept="3EZMnI" id="7BQCCwpN1$p" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpN1$w" role="3EZMnx">
+        <property role="3F0ifm" value="FilterOneZero" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpN1$A" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpN1$s" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpN1$L">
+    <ref role="1XX52x" to="juyv:7BQCCwpN1$F" resolve="FilterOnePole" />
+    <node concept="3EZMnI" id="7BQCCwpN1$N" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpN1$U" role="3EZMnx">
+        <property role="3F0ifm" value="FilterOnePole" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpN1_0" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpN1$Q" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNkmT">
+    <ref role="1XX52x" to="juyv:7BQCCwpNkmN" resolve="FilterOnePoleOneZero" />
+    <node concept="3EZMnI" id="7BQCCwpNkmV" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNkn5" role="3EZMnx">
+        <property role="3F0ifm" value="FilterOnePoleOneZero" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNknb" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNkmY" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNknk">
+    <ref role="1XX52x" to="juyv:7BQCCwpNkne" resolve="FilterTwoPoles" />
+    <node concept="3EZMnI" id="7BQCCwpNknm" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNknt" role="3EZMnx">
+        <property role="3F0ifm" value="FilterTwoPoles" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNknz" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNknp" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNknG">
+    <ref role="1XX52x" to="juyv:7BQCCwpNknA" resolve="FilterTwoPolesTwoZeros" />
+    <node concept="3EZMnI" id="7BQCCwpNknI" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNknP" role="3EZMnx">
+        <property role="3F0ifm" value="FilterTwoPolesTwoZeros" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNknV" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNknL" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNko4">
+    <ref role="1XX52x" to="juyv:7BQCCwpNknY" resolve="FilterBandPass" />
+    <node concept="3EZMnI" id="7BQCCwpNko6" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNkod" role="3EZMnx">
+        <property role="3F0ifm" value="FilterBandPass" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNkoj" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1yK" resolve="TunableFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNko9" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNkos">
+    <ref role="1XX52x" to="juyv:7BQCCwpNkom" resolve="FilterBandStop" />
+    <node concept="3EZMnI" id="7BQCCwpNkou" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNko_" role="3EZMnx">
+        <property role="3F0ifm" value="FilterBandStop" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNkoF" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1yK" resolve="TunableFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNkox" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNqTz">
+    <ref role="1XX52x" to="juyv:7BQCCwpNqTt" resolve="FilterHighPass" />
+    <node concept="3EZMnI" id="7BQCCwpNqT_" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNqTG" role="3EZMnx">
+        <property role="3F0ifm" value="FilterHighPass" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNqTM" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1yK" resolve="TunableFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNqTC" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNqTV">
+    <ref role="1XX52x" to="juyv:7BQCCwpNqTP" resolve="FilterHighShelf" />
+    <node concept="3EZMnI" id="7BQCCwpNqTX" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNqU4" role="3EZMnx">
+        <property role="3F0ifm" value="FilterHighShelf" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNqUa" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1yK" resolve="TunableFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNqU0" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNqUj">
+    <ref role="1XX52x" to="juyv:7BQCCwpNqUd" resolve="FilterLowPass" />
+    <node concept="3EZMnI" id="7BQCCwpNqUl" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNqUs" role="3EZMnx">
+        <property role="3F0ifm" value="FilterLowPass" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNqUy" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1yK" resolve="TunableFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNqUo" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNqUF">
+    <ref role="1XX52x" to="juyv:7BQCCwpNqU_" resolve="FilterLowShelf" />
+    <node concept="3EZMnI" id="7BQCCwpNqUH" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNqUO" role="3EZMnx">
+        <property role="3F0ifm" value="FilterLowShelf" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNqUU" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1yK" resolve="TunableFilterEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNqUK" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNCu_">
+    <ref role="1XX52x" to="juyv:7BQCCwpNCuv" resolve="RedNoise" />
+    <node concept="3EZMnI" id="7BQCCwpNCuB" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNCuL" role="3EZMnx">
+        <property role="3F0ifm" value="RedNoise" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNCuR" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpMmkV" resolve="UnitOscillatorEditor" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNCuE" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNCv4">
+    <ref role="1XX52x" to="juyv:7BQCCwpNCuU" resolve="WhiteNoise" />
+    <node concept="3EZMnI" id="7BQCCwpNCv6" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNCvd" role="3EZMnx">
+        <property role="3F0ifm" value="WhiteNoise:" />
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpNJnX" role="3EZMnx">
+        <ref role="1NtTu8" to="tpck:h0TrG11" resolve="name" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpNCvj" role="3EZMnx">
+        <property role="3F0ifm" value="amplitude:" />
+        <node concept="pVoyu" id="7BQCCwpNCvw" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpNCvz" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpNCvr" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpNCuV" resolve="amplitude" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNCv9" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpNQhq">
+    <ref role="1XX52x" to="juyv:7BQCCwpNQhk" resolve="Delay" />
+    <node concept="3EZMnI" id="7BQCCwpNQhs" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpNQhz" role="3EZMnx">
+        <property role="3F0ifm" value="Delay" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpNQhL" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpNQhY" role="3EZMnx">
+        <property role="3F0ifm" value="delay:" />
+        <node concept="pVoyu" id="7BQCCwpNQig" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpNQij" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpNQia" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpNQi8" resolve="delay" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpNQhv" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="7BQCCwpOntm">
+    <ref role="1XX52x" to="juyv:7BQCCwpOntg" resolve="InterpolatingDelay" />
+    <node concept="3EZMnI" id="7BQCCwpOnto" role="2wV5jI">
+      <node concept="3F0ifn" id="7BQCCwpOntz" role="3EZMnx">
+        <property role="3F0ifm" value="InterpolatingDelay" />
+      </node>
+      <node concept="PMmxH" id="7BQCCwpOntD" role="3EZMnx">
+        <ref role="PMmxG" node="7BQCCwpN1zT" resolve="UnitFilterEditor" />
+      </node>
+      <node concept="3F0ifn" id="7BQCCwpOntK" role="3EZMnx">
+        <property role="3F0ifm" value="max_delay:" />
+        <node concept="pVoyu" id="7BQCCwpOnu2" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="7BQCCwpOnu5" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="7BQCCwpOntW" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:7BQCCwpOntP" resolve="max_delay" />
+      </node>
+      <node concept="l2Vlx" id="7BQCCwpOntr" role="2iSdaV" />
+    </node>
   </node>
 </model>
 

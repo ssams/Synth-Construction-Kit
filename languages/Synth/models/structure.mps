@@ -113,18 +113,6 @@
     <node concept="PrWs8" id="1vU2Gvg0P5S" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
-    <node concept="1TJgyi" id="1vU2Gvg0P9W" role="1TKVEl">
-      <property role="TrG5h" value="min" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="1vU2Gvg0P9Y" role="1TKVEl">
-      <property role="TrG5h" value="max" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyi" id="1vU2Gvg0Pa1" role="1TKVEl">
-      <property role="TrG5h" value="default" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQU">
     <property role="1pbfSe" value="405014399" />
@@ -155,10 +143,7 @@
     <property role="1pbfSe" value="404761442" />
     <property role="TrG5h" value="SawToothOscillator" />
     <property role="34LRSv" value="saw" />
-    <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
-    <node concept="PrWs8" id="4tgHViNn2Cf" role="PzmwI">
-      <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
-    </node>
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
   </node>
   <node concept="1TIwiD" id="1vU2GvfTsBN">
     <property role="1pbfSe" value="404761414" />
@@ -233,6 +218,197 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="4tgHViNn5jq" role="PzmwI">
       <ref role="PrY4T" node="4tgHViNn2BN" resolve="ISoundSink" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpLxLY">
+    <property role="1pbfSe" value="1816346874" />
+    <property role="TrG5h" value="ImpulseOscillator" />
+    <property role="34LRSv" value="impulse" />
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpMmkB">
+    <property role="1pbfSe" value="1816131665" />
+    <property role="TrG5h" value="UnitOscillator" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
+    <node concept="PrWs8" id="7BQCCwpMuc2" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
+    </node>
+    <node concept="1TJgyi" id="7BQCCwpMmkE" role="1TKVEl">
+      <property role="TrG5h" value="min" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7BQCCwpMmkG" role="1TKVEl">
+      <property role="TrG5h" value="max" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7BQCCwpMmkJ" role="1TKVEl">
+      <property role="TrG5h" value="default" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="7BQCCwpMP_L" role="1TKVEl">
+      <property role="TrG5h" value="amplitude" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpMDO9">
+    <property role="1pbfSe" value="1816051823" />
+    <property role="TrG5h" value="PulseOscillator" />
+    <property role="34LRSv" value="pulse" />
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpMJBB">
+    <property role="1pbfSe" value="1816028049" />
+    <property role="TrG5h" value="SineOscillator" />
+    <property role="34LRSv" value="sine" />
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpMJBZ">
+    <property role="1pbfSe" value="1816028025" />
+    <property role="TrG5h" value="SquareOscillator" />
+    <property role="34LRSv" value="square" />
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpMJCn">
+    <property role="1pbfSe" value="1816028001" />
+    <property role="TrG5h" value="TriangleOscillator" />
+    <property role="34LRSv" value="triangle" />
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpN1yj">
+    <property role="1pbfSe" value="1815954661" />
+    <property role="TrG5h" value="UnitFilter" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
+    <node concept="PrWs8" id="7BQCCwpN1ym" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2BN" resolve="ISoundSink" />
+    </node>
+    <node concept="PrWs8" id="7BQCCwpN1yt" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpN1yx">
+    <property role="1pbfSe" value="1815954647" />
+    <property role="TrG5h" value="TunableFilter" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
+    <node concept="PrWs8" id="7BQCCwpN1yy" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2BN" resolve="ISoundSink" />
+    </node>
+    <node concept="PrWs8" id="7BQCCwpN1yB" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
+    </node>
+    <node concept="1TJgyi" id="7BQCCwpN1zr" role="1TKVEl">
+      <property role="TrG5h" value="frequency" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpN1$h">
+    <property role="1pbfSe" value="1815954535" />
+    <property role="TrG5h" value="FilterOneZero" />
+    <property role="34LRSv" value="onezero" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpN1$F">
+    <property role="1pbfSe" value="1815954509" />
+    <property role="TrG5h" value="FilterOnePole" />
+    <property role="34LRSv" value="onepole" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNkmN">
+    <property role="1pbfSe" value="1815877573" />
+    <property role="TrG5h" value="FilterOnePoleOneZero" />
+    <property role="34LRSv" value="onepoleonezero" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNkne">
+    <property role="1pbfSe" value="1815877546" />
+    <property role="TrG5h" value="FilterTwoPoles" />
+    <property role="34LRSv" value="twopoles" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNknA">
+    <property role="1pbfSe" value="1815877522" />
+    <property role="TrG5h" value="FilterTwoPolesTwoZeros" />
+    <property role="34LRSv" value="twopolestwozeros" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNknY">
+    <property role="1pbfSe" value="1815877498" />
+    <property role="TrG5h" value="FilterBandPass" />
+    <property role="34LRSv" value="bandpass" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yx" resolve="TunableFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNkom">
+    <property role="1pbfSe" value="1815877474" />
+    <property role="TrG5h" value="FilterBandStop" />
+    <property role="34LRSv" value="bandstop" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yx" resolve="TunableFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNqTt">
+    <property role="1pbfSe" value="1815850779" />
+    <property role="TrG5h" value="FilterHighPass" />
+    <property role="34LRSv" value="highpass" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yx" resolve="TunableFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNqTP">
+    <property role="1pbfSe" value="1815850755" />
+    <property role="TrG5h" value="FilterHighShelf" />
+    <property role="34LRSv" value="highshelf" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yx" resolve="TunableFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNqUd">
+    <property role="1pbfSe" value="1815850731" />
+    <property role="TrG5h" value="FilterLowPass" />
+    <property role="34LRSv" value="lowpass" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yx" resolve="TunableFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNqU_">
+    <property role="1pbfSe" value="1815850707" />
+    <property role="TrG5h" value="FilterLowShelf" />
+    <property role="34LRSv" value="lowshelf" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yx" resolve="TunableFilter" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNCuv">
+    <property role="1pbfSe" value="1815795161" />
+    <property role="TrG5h" value="RedNoise" />
+    <property role="34LRSv" value="rednoise" />
+    <ref role="1TJDcQ" node="7BQCCwpMmkB" resolve="UnitOscillator" />
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNCuU">
+    <property role="1pbfSe" value="1815795134" />
+    <property role="TrG5h" value="WhiteNoise" />
+    <property role="34LRSv" value="whitenoise" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
+    <node concept="1TJgyi" id="7BQCCwpNCuV" role="1TKVEl">
+      <property role="TrG5h" value="amplitude" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="7BQCCwpNCuX" role="PzmwI">
+      <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpNQhk">
+    <property role="1pbfSe" value="1815738660" />
+    <property role="TrG5h" value="Delay" />
+    <property role="34LRSv" value="delay" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+    <node concept="1TJgyi" id="7BQCCwpNQi8" role="1TKVEl">
+      <property role="TrG5h" value="delay" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="7BQCCwpOntg">
+    <property role="1pbfSe" value="1815602728" />
+    <property role="TrG5h" value="InterpolatingDelay" />
+    <property role="34LRSv" value="interpolating" />
+    <ref role="1TJDcQ" node="7BQCCwpN1yj" resolve="UnitFilter" />
+    <node concept="1TJgyi" id="7BQCCwpOntP" role="1TKVEl">
+      <property role="TrG5h" value="max_delay" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
   </node>
 </model>
