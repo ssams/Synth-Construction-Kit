@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<solution name="JSyn" uuid="7192d85a-4cfe-4b34-945f-d00deefa2db0" moduleVersion="0" compileInMPS="true">
+<solution name="JSynSimplified" uuid="46b2ca9d-f0ce-4a5b-a278-7d74281d5d6c" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
     <modelRoot contentPath="${module}" type="java_classes">
-      <sourceRoot location="jsyn_16_7_3.jar" />
       <sourceRoot location="jSynBaseLib.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="${module}/jsyn_16_7_3.jar" />
     <stubModelEntry path="${module}/jSynBaseLib.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
     <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
+    <dependency reexport="false">7192d85a-4cfe-4b34-945f-d00deefa2db0(JSyn)</dependency>
   </dependencies>
   <languageVersions>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" fqName="jetbrains.mps.baseLanguage" version="4" />
@@ -26,6 +25,7 @@
   <dependencyVersions>
     <module reference="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" version="0" />
     <module reference="7192d85a-4cfe-4b34-945f-d00deefa2db0(JSyn)" version="0" />
+    <module reference="46b2ca9d-f0ce-4a5b-a278-7d74281d5d6c(JSynSimplified)" version="0" />
   </dependencyVersions>
 </solution>
 

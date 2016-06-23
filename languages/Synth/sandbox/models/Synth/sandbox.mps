@@ -5,7 +5,11 @@
     <use id="6a6cac0d-3689-466b-aed3-3701686a34e1" name="Synth" version="-1" />
     <generationPart ref="6a6cac0d-3689-466b-aed3-3701686a34e1(Synth)" />
   </languages>
-  <imports />
+  <imports>
+    <import index="y38" ref="r:4c8c6241-8bf4-4d04-84a1-f7fd7fcbdc2c(jetbrains.mps.refactoring.runtime.access)" />
+    <import index="1rit" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib(JSyn/)" />
+    <import index="yuee" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.oscillator.gui(JSyn/)" />
+  </imports>
   <registry>
     <language id="6a6cac0d-3689-466b-aed3-3701686a34e1" name="Synth">
       <concept id="1727705260352409611" name="Synth.structure.Synthesizer" flags="ng" index="3o6LFc">
@@ -106,8 +110,8 @@
       <node concept="3o7W1c" id="3yVB6mnVize" role="3O2z_E">
         <property role="3o7W2C" value="80" />
         <property role="3o7W2Q" value="31" />
-        <property role="3o7W2Z" value="100" />
-        <property role="3o7W17" value="100" />
+        <property role="3o7W2Z" value="60" />
+        <property role="3o7W17" value="30" />
       </node>
       <node concept="3o7W1c" id="3yVB6mnVizh" role="3O2z_E">
         <property role="3o7W2C" value="342" />
