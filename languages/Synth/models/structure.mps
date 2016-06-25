@@ -246,22 +246,30 @@
       <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
     </node>
     <node concept="1TJgyi" id="7BQCCwpMmkE" role="1TKVEl">
-      <property role="TrG5h" value="min" />
+      <property role="TrG5h" value="min_frequency" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyi" id="7BQCCwpMmkG" role="1TKVEl">
-      <property role="TrG5h" value="max" />
+      <property role="TrG5h" value="max_frequency" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="74rw0ndRkWB" role="1TKVEl">
+      <property role="TrG5h" value="min_amplitude" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="74rw0ndRkWF" role="1TKVEl">
+      <property role="TrG5h" value="max_amplitude" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
     <node concept="1TJgyj" id="5BYldHS4KYU" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="default" />
+      <property role="20kJfa" value="default_frequency" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5BYldHS4KYR" resolve="Frequency" />
     </node>
     <node concept="1TJgyj" id="5BYldHS4KYW" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
-      <property role="20kJfa" value="amplitude" />
+      <property role="20kJfa" value="default_amplitude" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5BYldHS56M8" resolve="Amplitude" />
     </node>

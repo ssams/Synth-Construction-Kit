@@ -1209,7 +1209,7 @@
         </node>
       </node>
       <node concept="3F0ifn" id="7BQCCwpMmnM" role="3EZMnx">
-        <property role="3F0ifm" value="min:" />
+        <property role="3F0ifm" value="min_frequency:" />
         <node concept="pVoyu" id="7BQCCwpMmp3" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -1218,13 +1218,13 @@
         </node>
       </node>
       <node concept="3F0A7n" id="7BQCCwpMmnW" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:7BQCCwpMmkE" resolve="min" />
+        <ref role="1NtTu8" to="juyv:7BQCCwpMmkE" resolve="min_frequency" />
         <node concept="Vb9p2" id="1MkjRcLhHbj" role="3F10Kt">
           <property role="Vbekb" value="ITALIC" />
         </node>
       </node>
       <node concept="3F0ifn" id="7BQCCwpMmog" role="3EZMnx">
-        <property role="3F0ifm" value="max:" />
+        <property role="3F0ifm" value="max_frequency:" />
         <node concept="pVoyu" id="7BQCCwpMmp6" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -1233,13 +1233,13 @@
         </node>
       </node>
       <node concept="3F0A7n" id="7BQCCwpMmos" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:7BQCCwpMmkG" resolve="max" />
+        <ref role="1NtTu8" to="juyv:7BQCCwpMmkG" resolve="max_frequency" />
         <node concept="Vb9p2" id="1MkjRcLhHbl" role="3F10Kt">
           <property role="Vbekb" value="ITALIC" />
         </node>
       </node>
       <node concept="3F0ifn" id="7BQCCwpMmoE" role="3EZMnx">
-        <property role="3F0ifm" value="default:" />
+        <property role="3F0ifm" value="default_frequency:" />
         <node concept="pVoyu" id="7BQCCwpMmp9" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
@@ -1250,8 +1250,38 @@
       <node concept="3F1sOY" id="5BYldHS4KZA" role="3EZMnx">
         <ref role="1NtTu8" to="juyv:5BYldHS4KYU" />
       </node>
+      <node concept="3F0ifn" id="74rw0ndRqqq" role="3EZMnx">
+        <property role="3F0ifm" value="min_amplitude:" />
+        <node concept="pVoyu" id="74rw0ndRqv5" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="74rw0ndRqv7" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="74rw0ndRqre" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:74rw0ndRkWB" resolve="min_amplitude" />
+        <node concept="Vb9p2" id="74rw0ndRqwR" role="3F10Kt">
+          <property role="Vbekb" value="ITALIC" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="74rw0ndRqtK" role="3EZMnx">
+        <property role="3F0ifm" value="max_amplitude:" />
+        <node concept="pVoyu" id="74rw0ndRqva" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="lj46D" id="74rw0ndRqvc" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="74rw0ndRquC" role="3EZMnx">
+        <ref role="1NtTu8" to="juyv:74rw0ndRkWF" resolve="max_amplitude" />
+        <node concept="Vb9p2" id="74rw0ndRqwT" role="3F10Kt">
+          <property role="Vbekb" value="ITALIC" />
+        </node>
+      </node>
       <node concept="3F0ifn" id="7BQCCwpMVwA" role="3EZMnx">
-        <property role="3F0ifm" value="amplitude:" />
+        <property role="3F0ifm" value="default_amplitude:" />
         <node concept="pVoyu" id="7BQCCwpMVxn" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>

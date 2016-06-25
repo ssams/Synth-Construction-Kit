@@ -157,7 +157,7 @@
   <node concept="1M2fIO" id="7BQCCwpNXje">
     <ref role="1M2myG" to="juyv:7BQCCwpMmkB" resolve="UnitOscillator" />
     <node concept="EnEH3" id="7BQCCwpNXjf" role="1MhHOB">
-      <ref role="EomxK" to="juyv:7BQCCwpMmkE" resolve="min" />
+      <ref role="EomxK" to="juyv:7BQCCwpMmkE" resolve="min_frequency" />
       <node concept="QB0g5" id="7BQCCwpNXlW" role="QCWH9">
         <node concept="3clFbS" id="7BQCCwpNXlX" role="2VODD2">
           <node concept="3clFbF" id="7BQCCwpNXn2" role="3cqZAp">
@@ -171,8 +171,41 @@
         </node>
       </node>
     </node>
+    <node concept="EnEH3" id="74rw0ndRqx1" role="1MhHOB">
+      <ref role="EomxK" to="juyv:74rw0ndRkWB" resolve="min_amplitude" />
+      <node concept="QB0g5" id="74rw0ndRskB" role="QCWH9">
+        <node concept="3clFbS" id="74rw0ndRskC" role="2VODD2">
+          <node concept="3clFbF" id="74rw0ndRslH" role="3cqZAp">
+            <node concept="2d3UOw" id="74rw0ndRsth" role="3clFbG">
+              <node concept="3cmrfG" id="74rw0ndRsu$" role="3uHU7w">
+                <property role="3cmrfH" value="0" />
+              </node>
+              <node concept="1Wqviy" id="74rw0ndRslG" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="EnEH3" id="74rw0ndRsw3" role="1MhHOB">
+      <ref role="EomxK" to="juyv:74rw0ndRkWF" resolve="max_amplitude" />
+      <node concept="QB0g5" id="74rw0ndRsA2" role="QCWH9">
+        <node concept="3clFbS" id="74rw0ndRsA3" role="2VODD2">
+          <node concept="3clFbF" id="74rw0ndRsB8" role="3cqZAp">
+            <node concept="2d3UOw" id="74rw0ndRsMW" role="3clFbG">
+              <node concept="2OqwBi" id="74rw0ndRsUc" role="3uHU7w">
+                <node concept="EsrRn" id="74rw0ndRsOf" role="2Oq$k0" />
+                <node concept="3TrcHB" id="74rw0ndRt6G" role="2OqNvi">
+                  <ref role="3TsBF5" to="juyv:74rw0ndRkWB" resolve="min_amplitude" />
+                </node>
+              </node>
+              <node concept="1Wqviy" id="74rw0ndRsB7" role="3uHU7B" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
     <node concept="EnEH3" id="7BQCCwpO5hS" role="1MhHOB">
-      <ref role="EomxK" to="juyv:7BQCCwpMmkG" resolve="max" />
+      <ref role="EomxK" to="juyv:7BQCCwpMmkG" resolve="max_frequency" />
       <node concept="QB0g5" id="7BQCCwpO5mn" role="QCWH9">
         <node concept="3clFbS" id="7BQCCwpO5mo" role="2VODD2">
           <node concept="3clFbF" id="7BQCCwpO5nt" role="3cqZAp">
@@ -180,7 +213,7 @@
               <node concept="2OqwBi" id="7BQCCwpO5KQ" role="3uHU7w">
                 <node concept="EsrRn" id="7BQCCwpO5ED" role="2Oq$k0" />
                 <node concept="3TrcHB" id="7BQCCwpO5RP" role="2OqNvi">
-                  <ref role="3TsBF5" to="juyv:7BQCCwpMmkE" resolve="min" />
+                  <ref role="3TsBF5" to="juyv:7BQCCwpMmkE" resolve="min_frequency" />
                 </node>
               </node>
               <node concept="1Wqviy" id="7BQCCwpO5ns" role="3uHU7B" />

@@ -47,10 +47,12 @@
       <concept id="8788390428292159787" name="Synth.structure.FilterOnePole" flags="ng" index="1weFIz" />
       <concept id="8788390428292263517" name="Synth.structure.FilterHighPass" flags="ng" index="1weKNl" />
       <concept id="8788390428291982631" name="Synth.structure.UnitOscillator" flags="ng" index="1wfWuJ">
-        <property id="8788390428291982634" name="min" index="1wfWuy" />
-        <property id="8788390428291982636" name="max" index="1wfWu$" />
-        <child id="6484713815049179066" name="default" index="xVlHx" />
-        <child id="6484713815049179068" name="amplitude" index="xVlHB" />
+        <property id="8150248713074069287" name="min_amplitude" index="2WLGWy" />
+        <property id="8150248713074069291" name="max_amplitude" index="2WLGWI" />
+        <property id="8788390428291982634" name="min_frequency" index="1wfWuy" />
+        <property id="8788390428291982636" name="max_frequency" index="1wfWu$" />
+        <child id="6484713815049179066" name="default_frequency" index="xVlHx" />
+        <child id="6484713815049179068" name="default_amplitude" index="xVlHB" />
       </concept>
       <concept id="5138809161560788736" name="Synth.structure.ConnectionList" flags="ng" index="3O2zyO">
         <child id="5138809161560788764" name="connections" index="3O2zyC" />
@@ -105,6 +107,8 @@
         <property role="TrG5h" value="osc" />
         <property role="1wfWuy" value="1" />
         <property role="1wfWu$" value="1" />
+        <property role="2WLGWy" value="0" />
+        <property role="2WLGWI" value="2" />
         <node concept="xVlHG" id="1MkjRcLdh$x" role="xVlHx">
           <property role="TrG5h" value="frequency" />
           <property role="xUFDL" value="1" />
@@ -125,6 +129,8 @@
         <property role="TrG5h" value="osc2" />
         <property role="1wfWuy" value="2" />
         <property role="1wfWu$" value="3" />
+        <property role="2WLGWy" value="0" />
+        <property role="2WLGWI" value="4" />
         <node concept="xVlHG" id="1MkjRcLfQ5R" role="xVlHx">
           <property role="TrG5h" value="frequency" />
           <property role="xUFDL" value="3" />
