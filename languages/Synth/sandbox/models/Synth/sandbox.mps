@@ -12,6 +12,11 @@
   </imports>
   <registry>
     <language id="6a6cac0d-3689-466b-aed3-3701686a34e1" name="Synth">
+      <concept id="6484713815049268360" name="Synth.structure.Amplitude" flags="ng" index="xUzxj" />
+      <concept id="6484713815049301673" name="Synth.structure.SoundProperty" flags="ng" index="xUFDM">
+        <property id="6484713815049301674" name="value" index="xUFDL" />
+      </concept>
+      <concept id="6484713815049179063" name="Synth.structure.Frequency" flags="ng" index="xVlHG" />
       <concept id="1727705260352409611" name="Synth.structure.Synthesizer" flags="ng" index="3o6LFc">
         <child id="1727705260352737654" name="controls" index="3o71IL" />
         <child id="1727705260352737651" name="sounds" index="3o71IO" />
@@ -27,23 +32,25 @@
         <property id="1727705260352719471" name="x" index="3o7W2C" />
         <property id="1727705260352719473" name="y" index="3o7W2Q" />
         <property id="1727705260352719480" name="width" index="3o7W2Z" />
+        <reference id="2059358285779872796" name="soundProperty" index="HJIdJ" />
+        <reference id="5138809161560872974" name="sound" index="3O2QYU" />
       </concept>
       <concept id="1727705260352719499" name="Synth.structure.Slider" flags="ng" index="3o7W1c" />
+      <concept id="1727705260352719319" name="Synth.structure.SawToothOscillator" flags="ng" index="3o7Wcg" />
       <concept id="1727705260352719347" name="Synth.structure.LinearConnection" flags="ng" index="3o7WcO" />
-      <concept id="8788390428291767422" name="Synth.structure.ImpulseOscillator" flags="ng" index="1wcbVQ" />
       <concept id="8788390428292375636" name="Synth.structure.Delay" flags="ng" index="1wesrs">
         <property id="8788390428292375688" name="delay" index="1weso0" />
       </concept>
       <concept id="8788390428292159649" name="Synth.structure.TunableFilter" flags="ng" index="1weFCD">
-        <property id="8788390428292159707" name="frequency" index="1weFDj" />
+        <child id="2059358285779973723" name="frequency" index="HI7$C" />
       </concept>
       <concept id="8788390428292159787" name="Synth.structure.FilterOnePole" flags="ng" index="1weFIz" />
       <concept id="8788390428292263517" name="Synth.structure.FilterHighPass" flags="ng" index="1weKNl" />
       <concept id="8788390428291982631" name="Synth.structure.UnitOscillator" flags="ng" index="1wfWuJ">
-        <property id="8788390428292110705" name="amplitude" index="1wfvJT" />
         <property id="8788390428291982634" name="min" index="1wfWuy" />
         <property id="8788390428291982636" name="max" index="1wfWu$" />
-        <property id="8788390428291982639" name="default" index="1wfWuB" />
+        <child id="6484713815049179066" name="default" index="xVlHx" />
+        <child id="6484713815049179068" name="amplitude" index="xVlHB" />
       </concept>
       <concept id="5138809161560788736" name="Synth.structure.ConnectionList" flags="ng" index="3O2zyO">
         <child id="5138809161560788764" name="connections" index="3O2zyC" />
@@ -66,70 +73,71 @@
   <node concept="3o6LFc" id="1vU2GvfV3S4">
     <property role="TrG5h" value="Synth" />
     <node concept="3O2zyO" id="4tgHViNmRXW" role="3o71IQ">
-      <node concept="3o7WcO" id="7BQCCwpMub_" role="3O2zyC">
-        <ref role="3O2zAc" node="7BQCCwpNe4G" resolve="onepole" />
-        <ref role="3O2zA7" node="7BQCCwpMDNT" resolve="osc" />
-      </node>
-      <node concept="3o7WcO" id="7BQCCwpNe4O" role="3O2zyC">
-        <ref role="3O2zA7" node="7BQCCwpNe4G" resolve="onepole" />
-        <ref role="3O2zAc" node="7BQCCwpNCu8" resolve="highpass" />
-      </node>
-      <node concept="3o7WcO" id="7BQCCwpOv34" role="3O2zyC">
-        <ref role="3O2zA7" node="7BQCCwpNCu8" resolve="highpass" />
+      <node concept="3o7WcO" id="1MkjRcLf72U" role="3O2zyC">
+        <ref role="3O2zA7" node="1MkjRcLdh$v" resolve="osc" />
         <ref role="3O2zAc" node="7BQCCwpOv2K" resolve="delay" />
+      </node>
+      <node concept="3o7WcO" id="1MkjRcLf732" role="3O2zyC">
+        <ref role="3O2zA7" node="7BQCCwpOv2K" resolve="delay" />
+        <ref role="3O2zAc" node="1MkjRcLeJLm" resolve="highpass" />
+      </node>
+      <node concept="3o7WcO" id="1MkjRcLf73c" role="3O2zyC">
+        <ref role="3O2zA7" node="1MkjRcLeJLm" resolve="highpass" />
+        <ref role="3O2zAc" node="7BQCCwpNe4G" resolve="onepole" />
       </node>
       <node concept="3o7WcO" id="7BQCCwpNCuq" role="3O2zyC">
         <ref role="3O2zAc" node="3yVB6mnVis9" resolve="speaker" />
-        <ref role="3O2zA7" node="7BQCCwpOv2K" resolve="delay" />
+        <ref role="3O2zA7" node="7BQCCwpNe4G" resolve="onepole" />
       </node>
     </node>
     <node concept="3O2z_m" id="4tgHViNmRXY" role="3o71IO">
       <node concept="3O3eca" id="3yVB6mnVis9" role="3O3eTU">
         <property role="TrG5h" value="speaker" />
       </node>
-      <node concept="1wcbVQ" id="7BQCCwpMDNT" role="3O2z_a">
-        <property role="TrG5h" value="osc" />
-        <property role="1wfWuy" value="10" />
-        <property role="1wfWu$" value="1000" />
-        <property role="1wfWuB" value="300" />
-        <property role="1wfvJT" value="40" />
-      </node>
       <node concept="1weFIz" id="7BQCCwpNe4G" role="3O2z_a">
         <property role="TrG5h" value="onepole" />
-      </node>
-      <node concept="1weKNl" id="7BQCCwpNCu8" role="3O2z_a">
-        <property role="TrG5h" value="highpass" />
-        <property role="1weFDj" value="300" />
       </node>
       <node concept="1wesrs" id="7BQCCwpOv2K" role="3O2z_a">
         <property role="TrG5h" value="delay" />
         <property role="1weso0" value="40" />
       </node>
+      <node concept="3o7Wcg" id="1MkjRcLdh$v" role="3O2z_a">
+        <property role="TrG5h" value="osc" />
+        <property role="1wfWuy" value="1" />
+        <property role="1wfWu$" value="1" />
+        <node concept="xVlHG" id="1MkjRcLdh$x" role="xVlHx">
+          <property role="TrG5h" value="frequency" />
+          <property role="xUFDL" value="1" />
+        </node>
+        <node concept="xUzxj" id="1MkjRcLdh$z" role="xVlHB">
+          <property role="TrG5h" value="amplitude" />
+          <property role="xUFDL" value="1" />
+        </node>
+      </node>
+      <node concept="1weKNl" id="1MkjRcLeJLm" role="3O2z_a">
+        <property role="TrG5h" value="highpass" />
+        <node concept="xVlHG" id="1MkjRcLeJLo" role="HI7$C">
+          <property role="TrG5h" value="frequency" />
+          <property role="xUFDL" value="34" />
+        </node>
+      </node>
     </node>
     <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL">
-      <node concept="3o7W1c" id="3yVB6mnVize" role="3O2z_E">
-        <property role="3o7W2C" value="80" />
-        <property role="3o7W2Q" value="31" />
-        <property role="3o7W2Z" value="60" />
-        <property role="3o7W17" value="30" />
-      </node>
-      <node concept="3o7W1c" id="3yVB6mnVizh" role="3O2z_E">
-        <property role="3o7W2C" value="342" />
-        <property role="3o7W2Q" value="58" />
-        <property role="3o7W2Z" value="100" />
-        <property role="3o7W17" value="100" />
-      </node>
-      <node concept="3o6YtW" id="3yVB6mnVizm" role="3O2z_E">
-        <property role="3o7W2C" value="38" />
-        <property role="3o7W2Q" value="162" />
-        <property role="3o7W2Z" value="113" />
-        <property role="3o7W17" value="115" />
-      </node>
-      <node concept="3o6YtW" id="3yVB6mnWRC6" role="3O2z_E">
-        <property role="3o7W2Z" value="100" />
-        <property role="3o7W17" value="100" />
-        <property role="3o7W2C" value="211" />
+      <node concept="3o6YtW" id="1MkjRcLf73s" role="3O2z_E">
+        <property role="3o7W2C" value="100" />
         <property role="3o7W2Q" value="100" />
+        <property role="3o7W2Z" value="20" />
+        <property role="3o7W17" value="20" />
+        <ref role="3O2QYU" node="1MkjRcLeJLm" resolve="highpass" />
+        <ref role="HJIdJ" node="1MkjRcLeJLo" resolve="frequency" />
+      </node>
+      <node concept="3o7W1c" id="1MkjRcLf73x" role="3O2z_E">
+        <property role="3o7W2C" value="200" />
+        <property role="3o7W2Q" value="200" />
+        <property role="3o7W2Z" value="30" />
+        <property role="3o7W17" value="20" />
+        <ref role="3O2QYU" node="1MkjRcLdh$v" resolve="osc" />
+        <ref role="HJIdJ" node="1MkjRcLdh$z" resolve="amplitude" />
       </node>
     </node>
   </node>

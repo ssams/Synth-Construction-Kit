@@ -101,7 +101,17 @@
     <node concept="1TJgyj" id="4tgHViNmXwe" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="sound" />
+      <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="1vU2GvfSuQT" resolve="Sound" />
+    </node>
+    <node concept="1TJgyj" id="1MkjRcLaEKs" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="soundProperty" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5BYldHS5eUD" resolve="SoundProperty" />
+    </node>
+    <node concept="PrWs8" id="5BYldHS5ThV" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
   <node concept="1TIwiD" id="1vU2GvfSuQT">
@@ -243,13 +253,17 @@
       <property role="TrG5h" value="max" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-    <node concept="1TJgyi" id="7BQCCwpMmkJ" role="1TKVEl">
-      <property role="TrG5h" value="default" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="5BYldHS4KYU" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="default" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5BYldHS4KYR" resolve="Frequency" />
     </node>
-    <node concept="1TJgyi" id="7BQCCwpMP_L" role="1TKVEl">
-      <property role="TrG5h" value="amplitude" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="5BYldHS4KYW" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="amplitude" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5BYldHS56M8" resolve="Amplitude" />
     </node>
   </node>
   <node concept="1TIwiD" id="7BQCCwpMDO9">
@@ -301,9 +315,11 @@
     <node concept="PrWs8" id="7BQCCwpN1yB" role="PzmwI">
       <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
     </node>
-    <node concept="1TJgyi" id="7BQCCwpN1zr" role="1TKVEl">
-      <property role="TrG5h" value="frequency" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    <node concept="1TJgyj" id="1MkjRcLb3pr" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="frequency" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5BYldHS4KYR" resolve="Frequency" />
     </node>
   </node>
   <node concept="1TIwiD" id="7BQCCwpN1$h">
@@ -383,12 +399,14 @@
     <property role="TrG5h" value="WhiteNoise" />
     <property role="34LRSv" value="whitenoise" />
     <ref role="1TJDcQ" node="1vU2GvfSuQT" resolve="Sound" />
-    <node concept="1TJgyi" id="7BQCCwpNCuV" role="1TKVEl">
-      <property role="TrG5h" value="amplitude" />
-      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
     <node concept="PrWs8" id="7BQCCwpNCuX" role="PzmwI">
       <ref role="PrY4T" node="4tgHViNn2Bn" resolve="ISoundSource" />
+    </node>
+    <node concept="1TJgyj" id="1MkjRcLeY4W" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="amplitude" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5BYldHS56M8" resolve="Amplitude" />
     </node>
   </node>
   <node concept="1TIwiD" id="7BQCCwpNQhk">
@@ -409,6 +427,30 @@
     <node concept="1TJgyi" id="7BQCCwpOntP" role="1TKVEl">
       <property role="TrG5h" value="max_delay" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5BYldHS4KYR">
+    <property role="1pbfSe" value="770612078" />
+    <property role="TrG5h" value="Frequency" />
+    <ref role="1TJDcQ" node="5BYldHS5eUD" resolve="SoundProperty" />
+  </node>
+  <node concept="1TIwiD" id="5BYldHS56M8">
+    <property role="1pbfSe" value="770522781" />
+    <property role="TrG5h" value="Amplitude" />
+    <ref role="1TJDcQ" node="5BYldHS5eUD" resolve="SoundProperty" />
+  </node>
+  <node concept="1TIwiD" id="5BYldHS5eUD">
+    <property role="1pbfSe" value="770489468" />
+    <property role="TrG5h" value="SoundProperty" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="5BYldHS5eUE" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="1MkjRcL5yGm" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
   </node>
 </model>
