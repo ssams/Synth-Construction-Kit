@@ -121,6 +121,19 @@
           <property role="xUFDL" value="34" />
         </node>
       </node>
+      <node concept="3o7Wcg" id="1MkjRcLfQ5P" role="3O2z_a">
+        <property role="TrG5h" value="osc2" />
+        <property role="1wfWuy" value="2" />
+        <property role="1wfWu$" value="3" />
+        <node concept="xVlHG" id="1MkjRcLfQ5R" role="xVlHx">
+          <property role="TrG5h" value="frequency" />
+          <property role="xUFDL" value="3" />
+        </node>
+        <node concept="xUzxj" id="1MkjRcLfQ5T" role="xVlHB">
+          <property role="TrG5h" value="amplitude" />
+          <property role="xUFDL" value="3" />
+        </node>
+      </node>
     </node>
     <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL">
       <node concept="3o6YtW" id="1MkjRcLf73s" role="3O2z_E">
