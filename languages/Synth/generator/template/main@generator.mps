@@ -6,6 +6,7 @@
     <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
+    <use id="f2801650-65d5-424e-bb1b-463a8781b786" name="jetbrains.mps.baseLanguage.javadoc" version="2" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -18,34 +19,22 @@
     <import index="k2dt" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.oscillator.controller(JSyn/)" />
     <import index="yuee" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.oscillator.gui(JSyn/)" />
     <import index="hk7t" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.oscillator(JSyn/)" />
+    <import index="ya33" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.general(JSyn/)" />
+    <import index="kf0m" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.oscillator.base(JSyn/)" />
+    <import index="hott" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:jSyn.lib.filter(JSyn/)" />
     <import index="juyv" ref="r:b3e4f12f-024c-47c9-b400-b69dd4cf11fc(Synth.structure)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
-    <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
-    <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" implicit="true" />
-    <import index="psr3" ref="7192d85a-4cfe-4b34-945f-d00deefa2db0/java:com.jsyn.ports(JSyn/)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
-      <concept id="1082485599095" name="jetbrains.mps.baseLanguage.structure.BlockStatement" flags="nn" index="9aQIb">
-        <child id="1082485599096" name="statements" index="9aQI4" />
-      </concept>
       <concept id="1202948039474" name="jetbrains.mps.baseLanguage.structure.InstanceMethodCallOperation" flags="nn" index="liA8E" />
       <concept id="1465982738277781862" name="jetbrains.mps.baseLanguage.structure.PlaceholderMember" flags="ng" index="2tJIrI" />
-      <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
-        <child id="1239714902950" name="expression" index="2$L3a6" />
-      </concept>
       <concept id="2820489544401957797" name="jetbrains.mps.baseLanguage.structure.DefaultClassCreator" flags="nn" index="HV5vD">
         <reference id="2820489544401957798" name="classifier" index="HV5vE" />
-      </concept>
-      <concept id="1154032098014" name="jetbrains.mps.baseLanguage.structure.AbstractLoopStatement" flags="nn" index="2LF5Ji">
-        <child id="1154032183016" name="body" index="2LFqv$" />
       </concept>
       <concept id="1197027756228" name="jetbrains.mps.baseLanguage.structure.DotExpression" flags="nn" index="2OqwBi">
         <child id="1197027771414" name="operand" index="2Oq$k0" />
         <child id="1197027833540" name="operation" index="2OqNvi" />
-      </concept>
-      <concept id="1197029447546" name="jetbrains.mps.baseLanguage.structure.FieldReferenceOperation" flags="nn" index="2OwXpG">
-        <reference id="1197029500499" name="fieldDeclaration" index="2Oxat5" />
       </concept>
       <concept id="1083260308424" name="jetbrains.mps.baseLanguage.structure.EnumConstantReference" flags="nn" index="Rm8GO">
         <reference id="1083260308426" name="enumConstantDeclaration" index="Rm8GQ" />
@@ -57,10 +46,6 @@
       <concept id="1137021947720" name="jetbrains.mps.baseLanguage.structure.ConceptFunction" flags="in" index="2VMwT0">
         <child id="1137022507850" name="body" index="2VODD2" />
       </concept>
-      <concept id="1070462154015" name="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" flags="ig" index="Wx3nA">
-        <property id="6468716278899126575" name="isVolatile" index="2dlcS1" />
-        <property id="6468716278899125786" name="isTransient" index="2dld4O" />
-      </concept>
       <concept id="1070475354124" name="jetbrains.mps.baseLanguage.structure.ThisExpression" flags="nn" index="Xjq3P" />
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
@@ -69,23 +54,14 @@
       <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
         <reference id="1144433194310" name="classConcept" index="1Pybhc" />
       </concept>
-      <concept id="1070533707846" name="jetbrains.mps.baseLanguage.structure.StaticFieldReference" flags="nn" index="10M0yZ">
-        <reference id="1144433057691" name="classifier" index="1PxDUh" />
-      </concept>
       <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
-      <concept id="1070534370425" name="jetbrains.mps.baseLanguage.structure.IntegerType" flags="in" index="10Oyi0" />
       <concept id="1070534760951" name="jetbrains.mps.baseLanguage.structure.ArrayType" flags="in" index="10Q1$e">
         <child id="1070534760952" name="componentType" index="10Q1$1" />
-      </concept>
-      <concept id="1068390468200" name="jetbrains.mps.baseLanguage.structure.FieldDeclaration" flags="ig" index="312cEg">
-        <property id="8606350594693632173" name="isTransient" index="eg7rD" />
-        <property id="1240249534625" name="isVolatile" index="34CwA1" />
       </concept>
       <concept id="1068390468198" name="jetbrains.mps.baseLanguage.structure.ClassConcept" flags="ig" index="312cEu">
         <child id="1165602531693" name="superclass" index="1zkMxy" />
       </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
-        <property id="1176718929932" name="isFinal" index="3TUv4t" />
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
@@ -122,13 +98,11 @@
       <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
         <property id="1068580320021" name="value" index="3cmrfH" />
       </concept>
-      <concept id="1068581242875" name="jetbrains.mps.baseLanguage.structure.PlusExpression" flags="nn" index="3cpWs3" />
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
       <concept id="1068581517677" name="jetbrains.mps.baseLanguage.structure.VoidType" flags="in" index="3cqZAl" />
-      <concept id="1081506773034" name="jetbrains.mps.baseLanguage.structure.LessThanExpression" flags="nn" index="3eOVzh" />
       <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
         <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
         <child id="1068499141038" name="actualArgument" index="37wK5m" />
@@ -144,23 +118,14 @@
       <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
         <reference id="1107535924139" name="classifier" index="3uigEE" />
       </concept>
-      <concept id="1081773326031" name="jetbrains.mps.baseLanguage.structure.BinaryOperation" flags="nn" index="3uHJSO">
-        <child id="1081773367579" name="rightExpression" index="3uHU7w" />
-        <child id="1081773367580" name="leftExpression" index="3uHU7B" />
-      </concept>
-      <concept id="1214918800624" name="jetbrains.mps.baseLanguage.structure.PostfixIncrementExpression" flags="nn" index="3uNrnE" />
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
-      <concept id="1144230876926" name="jetbrains.mps.baseLanguage.structure.AbstractForStatement" flags="nn" index="1DupvO">
-        <child id="1144230900587" name="variable" index="1Duv9x" />
-      </concept>
-      <concept id="1144231330558" name="jetbrains.mps.baseLanguage.structure.ForStatement" flags="nn" index="1Dw8fO">
-        <child id="1144231399730" name="condition" index="1Dwp0S" />
-        <child id="1144231408325" name="iteration" index="1Dwrff" />
+      <concept id="6329021646629104957" name="jetbrains.mps.baseLanguage.structure.TextCommentPart" flags="nn" index="3SKdUq" />
+      <concept id="6329021646629104954" name="jetbrains.mps.baseLanguage.structure.SingleLineComment" flags="nn" index="3SKdUt">
+        <child id="6329021646629175155" name="commentPart" index="3SKWNk" />
       </concept>
       <concept id="1146644602865" name="jetbrains.mps.baseLanguage.structure.PublicVisibility" flags="nn" index="3Tm1VV" />
-      <concept id="1146644623116" name="jetbrains.mps.baseLanguage.structure.PrivateVisibility" flags="nn" index="3Tm6S6" />
     </language>
     <language id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator">
       <concept id="1114706874351" name="jetbrains.mps.lang.generator.structure.CopySrcNodeMacro" flags="ln" index="29HgVG" />
@@ -238,10 +203,112 @@
         <ref role="v9R2y" node="1vU2GvfTAL4" resolve="reduce_Slider" />
       </node>
     </node>
-    <node concept="3aamgX" id="1vU2Gvg0TmA" role="3acgRq">
+    <node concept="3aamgX" id="4RdIakE3XBd" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:1vU2GvfSuQV" resolve="RotaryKnob" />
+      <node concept="j$656" id="4RdIakE3XBl" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3XBj" resolve="reduce_RotaryKnob" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y7h" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNknY" resolve="FilterBandPass" />
+      <node concept="j$656" id="4RdIakE3Yap" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3Yan" resolve="reduce_FilterBandPass" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y7p" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNkom" resolve="FilterBandStop" />
+      <node concept="j$656" id="4RdIakE3YaT" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3YaR" resolve="reduce_FilterBandStop" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y7z" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNqTt" resolve="FilterHighPass" />
+      <node concept="j$656" id="4RdIakE3Ybp" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3Ybn" resolve="reduce_FilterHighPass" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y7J" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNqTP" resolve="FilterHighShelf" />
+      <node concept="j$656" id="4RdIakE3YbT" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3YbR" resolve="reduce_FilterHighShelf" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y7X" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNqUd" resolve="FilterLowPass" />
+      <node concept="j$656" id="4RdIakE3Ycp" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3Ycn" resolve="reduce_FilterLowPass" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y8d" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNqU_" resolve="FilterLowShelf" />
+      <node concept="j$656" id="4RdIakE3YcT" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3YcR" resolve="reduce_FilterLowShelf" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y8v" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpN1$F" resolve="FilterOnePole" />
+      <node concept="j$656" id="4RdIakE3Ydp" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3Ydn" resolve="reduce_FilterOnePole" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y8N" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNkmN" resolve="FilterOnePoleOneZero" />
+      <node concept="j$656" id="4RdIakE3YdT" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3YdR" resolve="reduce_FilterOnePoleOneZero" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y99" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpN1$h" resolve="FilterOneZero" />
+      <node concept="j$656" id="4RdIakE3Yep" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3Yen" resolve="reduce_FilterOneZero" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y9x" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNkne" resolve="FilterTwoPoles" />
+      <node concept="j$656" id="4RdIakE3YeT" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3YeR" resolve="reduce_FilterTwoPoles" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE3Y9V" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpNknA" resolve="FilterTwoPolesTwoZeros" />
+      <node concept="j$656" id="4RdIakE3Yfp" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE3Yfn" resolve="reduce_FilterTwoPolesTwoZeros" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE44bd" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpLxLY" resolve="ImpulseOscillator" />
+      <node concept="j$656" id="4RdIakE44ex" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE44ev" resolve="reduce_ImpulseOscillator" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE44bF" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpMDO9" resolve="PulseOscillator" />
+      <node concept="j$656" id="4RdIakE44f1" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE44eZ" resolve="reduce_PulseOscillator" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE44cb" role="3acgRq">
       <ref role="30HIoZ" to="juyv:1vU2GvfTsBn" resolve="SawToothOscillator" />
-      <node concept="j$656" id="1vU2Gvg0TmI" role="1lVwrX">
-        <ref role="v9R2y" node="1vU2Gvg0TmG" resolve="reduce_SawToothOscillator" />
+      <node concept="j$656" id="4RdIakE44fx" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE44fv" resolve="reduce_SawToothOscillator" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE44cH" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpMJBB" resolve="SineOscillator" />
+      <node concept="j$656" id="4RdIakE44g1" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE44fZ" resolve="reduce_SineOscillator" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE44dh" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpMJBZ" resolve="SquareOscillator" />
+      <node concept="j$656" id="4RdIakE44gx" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE44gv" resolve="reduce_SquareOscillator" />
+      </node>
+    </node>
+    <node concept="3aamgX" id="4RdIakE44dR" role="3acgRq">
+      <ref role="30HIoZ" to="juyv:7BQCCwpMJCn" resolve="TriangleOscillator" />
+      <node concept="j$656" id="4RdIakE44h1" role="1lVwrX">
+        <ref role="v9R2y" node="4RdIakE44gZ" resolve="reduce_TriangleOscillator" />
       </node>
     </node>
     <node concept="3lhOvk" id="1vU2GvfSuRa" role="3lj3bC">
@@ -251,43 +318,6 @@
   </node>
   <node concept="312cEu" id="1vU2GvfSuRc">
     <property role="TrG5h" value="map_Synthesizer" />
-    <node concept="312cEg" id="7zPqb7lJkPx" role="jymVt">
-      <property role="34CwA1" value="false" />
-      <property role="eg7rD" value="false" />
-      <property role="TrG5h" value="baseEngine" />
-      <property role="3TUv4t" value="false" />
-      <node concept="3Tm6S6" id="7zPqb7lJb_K" role="1B3o_S" />
-      <node concept="3uibUv" id="7zPqb7lJkNR" role="1tU5fm">
-        <ref role="3uigEE" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
-      </node>
-      <node concept="2ShNRf" id="7zPqb7lJlG3" role="33vP2m">
-        <node concept="1pGfFk" id="7zPqb7lJunQ" role="2ShVmc">
-          <ref role="37wK5l" to="1rit:~JSynBaseEngine.&lt;init&gt;()" resolve="JSynBaseEngine" />
-        </node>
-      </node>
-    </node>
-    <node concept="Wx3nA" id="7zPqb7lJvg9" role="jymVt">
-      <property role="2dlcS1" value="false" />
-      <property role="2dld4O" value="false" />
-      <property role="TrG5h" value="BASE_WITH_OSC" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm6S6" id="7zPqb7lJuzB" role="1B3o_S" />
-      <node concept="10Oyi0" id="7zPqb7lJvew" role="1tU5fm" />
-      <node concept="3cmrfG" id="7zPqb7lJvMO" role="33vP2m">
-        <property role="3cmrfH" value="350" />
-      </node>
-    </node>
-    <node concept="Wx3nA" id="7zPqb7lJwPj" role="jymVt">
-      <property role="2dlcS1" value="false" />
-      <property role="2dld4O" value="false" />
-      <property role="TrG5h" value="BASE_HEIGHT_OSC" />
-      <property role="3TUv4t" value="true" />
-      <node concept="3Tm6S6" id="7zPqb7lJwbV" role="1B3o_S" />
-      <node concept="10Oyi0" id="7zPqb7lJwNE" role="1tU5fm" />
-      <node concept="3cmrfG" id="7zPqb7lJxo0" role="33vP2m">
-        <property role="3cmrfH" value="130" />
-      </node>
-    </node>
     <node concept="2tJIrI" id="7zPqb7lJFLH" role="jymVt" />
     <node concept="3clFb_" id="1vU2GvfSWW7" role="jymVt">
       <property role="TrG5h" value="init" />
@@ -295,54 +325,141 @@
       <node concept="3Tm1VV" id="1vU2GvfSWWa" role="1B3o_S" />
       <node concept="3clFbS" id="1vU2GvfSWWb" role="3clF47">
         <node concept="3clFbF" id="7zPqb7lJGQV" role="3cqZAp">
-          <node concept="2OqwBi" id="7zPqb7lJINA" role="3clFbG">
-            <node concept="2OqwBi" id="7zPqb7lJHh4" role="2Oq$k0">
-              <node concept="Xjq3P" id="7zPqb7lJGQT" role="2Oq$k0" />
-              <node concept="2OwXpG" id="7zPqb7lJIqt" role="2OqNvi">
-                <ref role="2Oxat5" node="7zPqb7lJkPx" resolve="baseEngine" />
-              </node>
+          <node concept="2YIFZM" id="4wNAXyA7fNW" role="3clFbG">
+            <ref role="37wK5l" to="1rit:~JSynBaseEngine.init():void" resolve="init" />
+            <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+          </node>
+        </node>
+        <node concept="3clFbH" id="4wNAXyA7sVc" role="3cqZAp" />
+        <node concept="3clFbF" id="4wNAXyA7o4I" role="3cqZAp">
+          <node concept="2YIFZM" id="4wNAXyA7obp" role="3clFbG">
+            <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+            <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+            <node concept="Xl_RD" id="4wNAXyA7o$i" role="37wK5m">
+              <property role="Xl_RC" value="test" />
             </node>
-            <node concept="liA8E" id="7zPqb7lJITC" role="2OqNvi">
-              <ref role="37wK5l" to="1rit:~JSynBaseEngine.init():void" resolve="init" />
+            <node concept="Rm8GO" id="4wNAXyA7pmX" role="37wK5m">
+              <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.SINE" resolve="SINE" />
+              <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="7zPqb7lJP75" role="3cqZAp">
-          <node concept="2OqwBi" id="7zPqb7lJQGj" role="3clFbG">
-            <node concept="2OqwBi" id="7zPqb7lJPxJ" role="2Oq$k0">
-              <node concept="Xjq3P" id="7zPqb7lJP73" role="2Oq$k0" />
-              <node concept="2OwXpG" id="7zPqb7lJQje" role="2OqNvi">
-                <ref role="2Oxat5" node="7zPqb7lJkPx" resolve="baseEngine" />
-              </node>
-            </node>
-            <node concept="liA8E" id="7zPqb7lJQLK" role="2OqNvi">
-              <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
-              <node concept="Xl_RD" id="7zPqb7lJR9p" role="37wK5m">
-                <property role="Xl_RC" value="test" />
-              </node>
-              <node concept="Rm8GO" id="7zPqb7lJTvn" role="37wK5m">
-                <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.SINE" resolve="SINE" />
-                <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
-              </node>
+        <node concept="3clFbF" id="4wNAXyA7qRX" role="3cqZAp">
+          <node concept="2YIFZM" id="4wNAXyA7qYZ" role="3clFbG">
+            <ref role="37wK5l" to="1rit:~JSynBaseEngine.connectOscWithLineOut(java.lang.String):void" resolve="connectOscWithLineOut" />
+            <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+            <node concept="Xl_RD" id="4wNAXyA7rod" role="37wK5m">
+              <property role="Xl_RC" value="test" />
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="7zPqb7lJUd1" role="3cqZAp">
-          <node concept="2OqwBi" id="7zPqb7lJVrr" role="3clFbG">
-            <node concept="2OqwBi" id="7zPqb7lJUCu" role="2Oq$k0">
-              <node concept="Xjq3P" id="7zPqb7lJUcZ" role="2Oq$k0" />
-              <node concept="2OwXpG" id="7zPqb7lJV2m" role="2OqNvi">
-                <ref role="2Oxat5" node="7zPqb7lJkPx" resolve="baseEngine" />
-              </node>
+        <node concept="3clFbH" id="4RdIakE4dLe" role="3cqZAp" />
+        <node concept="3clFbF" id="3yxRVfyejYK" role="3cqZAp">
+          <node concept="2YIFZM" id="3yxRVfyek4e" role="3clFbG">
+            <ref role="37wK5l" to="yuee:~OscillatorGUIbuilder.createRotaryKnobElement(java.lang.String,com.jsyn.unitgen.UnitOscillator,jSyn.lib.general.ControllType,jSyn.lib.oscillator.base.OscillatorSetupValues,jSyn.lib.general.BoundaryProperties):void" resolve="createRotaryKnobElement" />
+            <ref role="1Pybhc" to="yuee:~OscillatorGUIbuilder" resolve="OscillatorGUIbuilder" />
+            <node concept="Xl_RD" id="3yxRVfyekv1" role="37wK5m">
+              <property role="Xl_RC" value="test" />
             </node>
-            <node concept="liA8E" id="7zPqb7lJVwi" role="2OqNvi">
-              <ref role="37wK5l" to="1rit:~JSynBaseEngine.connectOscWithLineOut(java.lang.String):void" resolve="connectOscWithLineOut" />
-              <node concept="Xl_RD" id="7zPqb7lJVRT" role="37wK5m">
+            <node concept="2YIFZM" id="4wNAXyA7sva" role="37wK5m">
+              <ref role="37wK5l" to="1rit:~JSynBaseEngine.getOscillatorById(java.lang.String):com.jsyn.unitgen.UnitOscillator" resolve="getOscillatorById" />
+              <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+              <node concept="Xl_RD" id="4wNAXyA7sS0" role="37wK5m">
                 <property role="Xl_RC" value="test" />
               </node>
             </node>
+            <node concept="Rm8GO" id="3yxRVfyeodE" role="37wK5m">
+              <ref role="Rm8GQ" to="ya33:~ControllType.AMPLITUDE" resolve="AMPLITUDE" />
+              <ref role="1Px2BO" to="ya33:~ControllType" resolve="ControllType" />
+            </node>
+            <node concept="2ShNRf" id="3yxRVfyeoBp" role="37wK5m">
+              <node concept="1pGfFk" id="3yxRVfyeEWF" role="2ShVmc">
+                <ref role="37wK5l" to="kf0m:~OscillatorSetupValues.&lt;init&gt;(double,double,double)" resolve="OscillatorSetupValues" />
+                <node concept="3b6qkQ" id="3yxRVfyeFkW" role="37wK5m">
+                  <property role="$nhwW" value="0.0" />
+                </node>
+                <node concept="3b6qkQ" id="3yxRVfyeG7B" role="37wK5m">
+                  <property role="$nhwW" value="1.0" />
+                </node>
+                <node concept="3b6qkQ" id="3yxRVfyeGSr" role="37wK5m">
+                  <property role="$nhwW" value="0.4" />
+                </node>
+              </node>
+            </node>
+            <node concept="2ShNRf" id="3yxRVfyeHiJ" role="37wK5m">
+              <node concept="1pGfFk" id="3yxRVfyeIUX" role="2ShVmc">
+                <ref role="37wK5l" to="ya33:~BoundaryProperties.&lt;init&gt;(int,int,int,int)" resolve="BoundaryProperties" />
+                <node concept="3cmrfG" id="3yxRVfyeJjA" role="37wK5m">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="3cmrfG" id="3yxRVfyeJPY" role="37wK5m">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="3cmrfG" id="3yxRVfyeKeL" role="37wK5m">
+                  <property role="3cmrfH" value="100" />
+                </node>
+                <node concept="3cmrfG" id="3yxRVfyeKDs" role="37wK5m">
+                  <property role="3cmrfH" value="100" />
+                </node>
+              </node>
+            </node>
           </node>
         </node>
+        <node concept="3clFbH" id="4RdIakE4dDI" role="3cqZAp" />
+        <node concept="3clFbF" id="4RdIakE4ccu" role="3cqZAp">
+          <node concept="2YIFZM" id="4RdIakE4cit" role="3clFbG">
+            <ref role="37wK5l" to="yuee:~OscillatorGUIbuilder.createRangeSliderElement(java.lang.String,com.jsyn.unitgen.UnitOscillator,jSyn.lib.general.ControllType,jSyn.lib.oscillator.base.OscillatorSetupValues,jSyn.lib.general.BoundaryProperties):void" resolve="createRangeSliderElement" />
+            <ref role="1Pybhc" to="yuee:~OscillatorGUIbuilder" resolve="OscillatorGUIbuilder" />
+            <node concept="Xl_RD" id="4RdIakE4ciu" role="37wK5m">
+              <property role="Xl_RC" value="test" />
+            </node>
+            <node concept="2YIFZM" id="4RdIakE4civ" role="37wK5m">
+              <ref role="37wK5l" to="1rit:~JSynBaseEngine.getOscillatorById(java.lang.String):com.jsyn.unitgen.UnitOscillator" resolve="getOscillatorById" />
+              <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+              <node concept="Xl_RD" id="4RdIakE4ciw" role="37wK5m">
+                <property role="Xl_RC" value="test" />
+              </node>
+            </node>
+            <node concept="Rm8GO" id="4RdIakE4dAi" role="37wK5m">
+              <ref role="Rm8GQ" to="ya33:~ControllType.FREQUENCY" resolve="FREQUENCY" />
+              <ref role="1Px2BO" to="ya33:~ControllType" resolve="ControllType" />
+            </node>
+            <node concept="2ShNRf" id="4RdIakE4ciy" role="37wK5m">
+              <node concept="1pGfFk" id="4RdIakE4ciz" role="2ShVmc">
+                <ref role="37wK5l" to="kf0m:~OscillatorSetupValues.&lt;init&gt;(double,double,double)" resolve="OscillatorSetupValues" />
+                <node concept="3b6qkQ" id="4RdIakE4ci$" role="37wK5m">
+                  <property role="$nhwW" value="0.0" />
+                </node>
+                <node concept="3b6qkQ" id="4RdIakE4ci_" role="37wK5m">
+                  <property role="$nhwW" value="1000.0" />
+                </node>
+                <node concept="3b6qkQ" id="4RdIakE4dvi" role="37wK5m">
+                  <property role="$nhwW" value="330.0" />
+                </node>
+              </node>
+            </node>
+            <node concept="2ShNRf" id="4RdIakE4ciB" role="37wK5m">
+              <node concept="1pGfFk" id="4RdIakE4ciC" role="2ShVmc">
+                <ref role="37wK5l" to="ya33:~BoundaryProperties.&lt;init&gt;(int,int,int,int)" resolve="BoundaryProperties" />
+                <node concept="3cmrfG" id="4RdIakE4ciD" role="37wK5m">
+                  <property role="3cmrfH" value="100" />
+                </node>
+                <node concept="3cmrfG" id="4RdIakE4ciE" role="37wK5m">
+                  <property role="3cmrfH" value="0" />
+                </node>
+                <node concept="3cmrfG" id="4RdIakE4ciF" role="37wK5m">
+                  <property role="3cmrfH" value="300" />
+                </node>
+                <node concept="3cmrfG" id="4RdIakE4ciG" role="37wK5m">
+                  <property role="3cmrfH" value="100" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbH" id="4RdIakE4ccJ" role="3cqZAp" />
+        <node concept="3clFbH" id="4RdIakE4c9B" role="3cqZAp" />
+        <node concept="3clFbH" id="3yxRVfyeKIX" role="3cqZAp" />
         <node concept="1X3_iC" id="oqFRYW2slJ" role="lGtFl">
           <property role="3V$3am" value="statement" />
           <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
@@ -372,92 +489,45 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbH" id="oqFRYW2xU7" role="3cqZAp">
-          <node concept="1WS0z7" id="oqFRYW2xZN" role="lGtFl">
-            <node concept="3JmXsc" id="oqFRYW2xZQ" role="3Jn$fo">
-              <node concept="3clFbS" id="oqFRYW2xZR" role="2VODD2">
-                <node concept="3clFbF" id="oqFRYW2xZX" role="3cqZAp">
-                  <node concept="2OqwBi" id="oqFRYW2yw2" role="3clFbG">
-                    <node concept="2OqwBi" id="oqFRYW2xZS" role="2Oq$k0">
-                      <node concept="30H73N" id="oqFRYW2xZW" role="2Oq$k0" />
-                      <node concept="3TrEf2" id="oqFRYW2ymI" role="2OqNvi">
-                        <ref role="3Tt5mk" to="juyv:1vU2GvfTx5Q" />
+        <node concept="3SKdUt" id="4RdIakE3UQ$" role="3cqZAp">
+          <node concept="3SKdUq" id="4RdIakE3UQA" role="3SKWNk" />
+        </node>
+        <node concept="1X3_iC" id="4RdIakE3V57" role="lGtFl">
+          <property role="3V$3am" value="statement" />
+          <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
+          <node concept="1X3_iC" id="4RdIakE3V8V" role="lGtFl">
+            <property role="3V$3am" value="commentedNode" />
+            <property role="3V$3ak" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/4452961908202556907/3078666699043039389" />
+            <node concept="3clFbH" id="oqFRYW2xU7" role="8Wnug">
+              <node concept="1WS0z7" id="oqFRYW2xZN" role="lGtFl">
+                <node concept="3JmXsc" id="oqFRYW2xZQ" role="3Jn$fo">
+                  <node concept="3clFbS" id="oqFRYW2xZR" role="2VODD2">
+                    <node concept="3clFbF" id="oqFRYW2xZX" role="3cqZAp">
+                      <node concept="2OqwBi" id="oqFRYW2yw2" role="3clFbG">
+                        <node concept="2OqwBi" id="oqFRYW2xZS" role="2Oq$k0">
+                          <node concept="30H73N" id="oqFRYW2xZW" role="2Oq$k0" />
+                          <node concept="3TrEf2" id="oqFRYW2ymI" role="2OqNvi">
+                            <ref role="3Tt5mk" to="juyv:1vU2GvfTx5Q" />
+                          </node>
+                        </node>
+                        <node concept="3Tsc0h" id="oqFRYW2y$O" role="2OqNvi">
+                          <ref role="3TtcxE" to="juyv:4tgHViNmCVu" />
+                        </node>
                       </node>
                     </node>
-                    <node concept="3Tsc0h" id="oqFRYW2y$O" role="2OqNvi">
-                      <ref role="3TtcxE" to="juyv:4tgHViNmCVu" />
-                    </node>
                   </node>
                 </node>
               </node>
+              <node concept="29HgVG" id="oqFRYW2yI0" role="lGtFl" />
             </node>
           </node>
-          <node concept="29HgVG" id="oqFRYW2yI0" role="lGtFl" />
+          <node concept="2VYdi" id="4RdIakE3V8W" role="8Wnug" />
         </node>
-        <node concept="3clFbH" id="oqFRYW2z58" role="3cqZAp" />
-        <node concept="3clFbF" id="7zPqb7lJXhO" role="3cqZAp">
-          <node concept="1rXfSq" id="7zPqb7lJXhM" role="3clFbG">
-            <ref role="37wK5l" to="dxuu:~JApplet.setLayout(java.awt.LayoutManager):void" resolve="setLayout" />
-            <node concept="2ShNRf" id="7zPqb7lJXGP" role="37wK5m">
-              <node concept="1pGfFk" id="7zPqb7lJZju" role="2ShVmc">
-                <ref role="37wK5l" to="z60i:~GridLayout.&lt;init&gt;(int,int)" resolve="GridLayout" />
-                <node concept="3cmrfG" id="7zPqb7lJZFj" role="37wK5m">
-                  <property role="3cmrfH" value="1" />
-                </node>
-                <node concept="3cmrfG" id="7zPqb7lK02n" role="37wK5m">
-                  <property role="3cmrfH" value="1" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="7zPqb7lK0Ia" role="3cqZAp">
-          <node concept="1rXfSq" id="7zPqb7lK0I8" role="3clFbG">
-            <ref role="37wK5l" to="z60i:~Container.add(java.awt.Component):java.awt.Component" resolve="add" />
-            <node concept="2YIFZM" id="7zPqb7lK3Yj" role="37wK5m">
-              <ref role="37wK5l" to="yuee:~OscillatorPanelBuilder.buildOscillatorPanel(java.lang.String,com.jsyn.unitgen.UnitOscillator,double,double,double,double,double,double):javax.swing.JPanel" resolve="buildOscillatorPanel" />
-              <ref role="1Pybhc" to="yuee:~OscillatorPanelBuilder" resolve="OscillatorPanelBuilder" />
-              <node concept="Xl_RD" id="7zPqb7lK4mJ" role="37wK5m">
-                <property role="Xl_RC" value="Oscillator test" />
-              </node>
-              <node concept="2OqwBi" id="7zPqb7lK6ow" role="37wK5m">
-                <node concept="2OqwBi" id="7zPqb7lK5cM" role="2Oq$k0">
-                  <node concept="Xjq3P" id="7zPqb7lK4M2" role="2Oq$k0" />
-                  <node concept="2OwXpG" id="7zPqb7lK5YE" role="2OqNvi">
-                    <ref role="2Oxat5" node="7zPqb7lJkPx" resolve="baseEngine" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="7zPqb7lK6ug" role="2OqNvi">
-                  <ref role="37wK5l" to="1rit:~JSynBaseEngine.getOscillatorById(java.lang.String):com.jsyn.unitgen.UnitOscillator" resolve="getOscillatorById" />
-                  <node concept="Xl_RD" id="7zPqb7lK6QC" role="37wK5m">
-                    <property role="Xl_RC" value="test" />
-                  </node>
-                </node>
-              </node>
-              <node concept="3b6qkQ" id="7zPqb7lK7EV" role="37wK5m">
-                <property role="$nhwW" value="0.0" />
-              </node>
-              <node concept="3cmrfG" id="7zPqb7lK86W" role="37wK5m">
-                <property role="3cmrfH" value="1000" />
-              </node>
-              <node concept="3b6qkQ" id="7zPqb7lK8YP" role="37wK5m">
-                <property role="$nhwW" value="2.0" />
-              </node>
-              <node concept="3cmrfG" id="7zPqb7lK9rq" role="37wK5m">
-                <property role="3cmrfH" value="0" />
-              </node>
-              <node concept="3cmrfG" id="7zPqb7lK9Pb" role="37wK5m">
-                <property role="3cmrfH" value="1" />
-              </node>
-              <node concept="3b6qkQ" id="7zPqb7lKahT" role="37wK5m">
-                <property role="$nhwW" value="0.5" />
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="1vU2GvfZHfP" role="3cqZAp">
-          <node concept="1rXfSq" id="1vU2GvfZHfN" role="3clFbG">
-            <ref role="37wK5l" to="z60i:~Container.validate():void" resolve="validate" />
+        <node concept="3clFbF" id="3yxRVfyeMit" role="3cqZAp">
+          <node concept="2YIFZM" id="3yxRVfyeMP5" role="3clFbG">
+            <ref role="37wK5l" to="yuee:~OscillatorGUIbuilder.buildGUI(javax.swing.JApplet):void" resolve="buildGUI" />
+            <ref role="1Pybhc" to="yuee:~OscillatorGUIbuilder" resolve="OscillatorGUIbuilder" />
+            <node concept="Xjq3P" id="3yxRVfyeNfL" role="37wK5m" />
           </node>
         </node>
       </node>
@@ -471,16 +541,9 @@
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="1vU2GvfYSYr" role="3clF47">
         <node concept="3clFbF" id="7zPqb7lJJ_4" role="3cqZAp">
-          <node concept="2OqwBi" id="7zPqb7lJKKD" role="3clFbG">
-            <node concept="2OqwBi" id="7zPqb7lJJZ3" role="2Oq$k0">
-              <node concept="Xjq3P" id="7zPqb7lJJ_3" role="2Oq$k0" />
-              <node concept="2OwXpG" id="7zPqb7lJKnF" role="2OqNvi">
-                <ref role="2Oxat5" node="7zPqb7lJkPx" resolve="baseEngine" />
-              </node>
-            </node>
-            <node concept="liA8E" id="7zPqb7lJKPB" role="2OqNvi">
-              <ref role="37wK5l" to="1rit:~JSynBaseEngine.start():void" resolve="start" />
-            </node>
+          <node concept="2YIFZM" id="4wNAXyA7h1K" role="3clFbG">
+            <ref role="37wK5l" to="1rit:~JSynBaseEngine.start():void" resolve="start" />
+            <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
           </node>
         </node>
       </node>
@@ -495,17 +558,10 @@
       <property role="DiZV1" value="false" />
       <property role="2aFKle" value="false" />
       <node concept="3clFbS" id="1vU2GvfYPvG" role="3clF47">
-        <node concept="3clFbF" id="7zPqb7lJLx3" role="3cqZAp">
-          <node concept="2OqwBi" id="7zPqb7lJMGJ" role="3clFbG">
-            <node concept="2OqwBi" id="7zPqb7lJLV2" role="2Oq$k0">
-              <node concept="Xjq3P" id="7zPqb7lJLx2" role="2Oq$k0" />
-              <node concept="2OwXpG" id="7zPqb7lJMjE" role="2OqNvi">
-                <ref role="2Oxat5" node="7zPqb7lJkPx" resolve="baseEngine" />
-              </node>
-            </node>
-            <node concept="liA8E" id="7zPqb7lJMKo" role="2OqNvi">
-              <ref role="37wK5l" to="1rit:~JSynBaseEngine.stop():void" resolve="stop" />
-            </node>
+        <node concept="3clFbF" id="4wNAXyA7inI" role="3cqZAp">
+          <node concept="2YIFZM" id="4wNAXyA7ipt" role="3clFbG">
+            <ref role="37wK5l" to="1rit:~JSynBaseEngine.stop():void" resolve="stop" />
+            <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
           </node>
         </node>
       </node>
@@ -579,11 +635,11 @@
             </node>
             <node concept="liA8E" id="1vU2GvfYJBi" role="2OqNvi">
               <ref role="37wK5l" to="z60i:~Window.setSize(int,int):void" resolve="setSize" />
-              <node concept="37vLTw" id="7zPqb7lJNzX" role="37wK5m">
-                <ref role="3cqZAo" node="7zPqb7lJvg9" resolve="BASE_WITH_OSC" />
+              <node concept="3cmrfG" id="3yxRVfyeipz" role="37wK5m">
+                <property role="3cmrfH" value="400" />
               </node>
-              <node concept="37vLTw" id="7zPqb7lJOoX" role="37wK5m">
-                <ref role="3cqZAo" node="7zPqb7lJwPj" resolve="BASE_HEIGHT_OSC" />
+              <node concept="3cmrfG" id="3yxRVfyeir0" role="37wK5m">
+                <property role="3cmrfH" value="600" />
               </node>
             </node>
           </node>
@@ -640,262 +696,546 @@
   <node concept="13MO4I" id="1vU2GvfTAL4">
     <property role="TrG5h" value="reduce_Slider" />
     <ref role="3gUMe" to="juyv:1vU2GvfTsEb" resolve="Slider" />
-    <node concept="1Dw8fO" id="oqFRYW3l3W" role="13RCb5">
-      <node concept="3cpWsn" id="oqFRYW3l3Y" role="1Duv9x">
-        <property role="TrG5h" value="i" />
-        <node concept="10Oyi0" id="oqFRYW3l47" role="1tU5fm" />
-        <node concept="3cmrfG" id="oqFRYW3l4q" role="33vP2m">
-          <property role="3cmrfH" value="0" />
+    <node concept="3clFbF" id="4RdIakE3W51" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE3W52" role="3clFbG">
+        <ref role="1Pybhc" to="yuee:~OscillatorGUIbuilder" resolve="OscillatorGUIbuilder" />
+        <ref role="37wK5l" to="yuee:~OscillatorGUIbuilder.createRotaryKnobElement(java.lang.String,com.jsyn.unitgen.UnitOscillator,jSyn.lib.general.ControllType,jSyn.lib.oscillator.base.OscillatorSetupValues,jSyn.lib.general.BoundaryProperties):void" resolve="createRotaryKnobElement" />
+        <node concept="Xl_RD" id="4RdIakE3W53" role="37wK5m">
+          <property role="Xl_RC" value="test" />
         </node>
-      </node>
-      <node concept="3clFbS" id="oqFRYW3l3Z" role="2LFqv$">
-        <node concept="3clFbF" id="oqFRYW3lj6" role="3cqZAp">
-          <node concept="2OqwBi" id="oqFRYW3lln" role="3clFbG">
-            <node concept="10M0yZ" id="oqFRYW3lja" role="2Oq$k0">
-              <ref role="1PxDUh" to="wyt6:~System" resolve="System" />
-              <ref role="3cqZAo" to="wyt6:~System.out" resolve="out" />
+        <node concept="2YIFZM" id="4RdIakE3W54" role="37wK5m">
+          <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+          <ref role="37wK5l" to="1rit:~JSynBaseEngine.getOscillatorById(java.lang.String):com.jsyn.unitgen.UnitOscillator" resolve="getOscillatorById" />
+          <node concept="Xl_RD" id="4RdIakE3W55" role="37wK5m">
+            <property role="Xl_RC" value="test" />
+          </node>
+        </node>
+        <node concept="Rm8GO" id="4RdIakE3W56" role="37wK5m">
+          <ref role="1Px2BO" to="ya33:~ControllType" resolve="ControllType" />
+          <ref role="Rm8GQ" to="ya33:~ControllType.AMPLITUDE" resolve="AMPLITUDE" />
+        </node>
+        <node concept="2ShNRf" id="4RdIakE3W57" role="37wK5m">
+          <node concept="1pGfFk" id="4RdIakE3W58" role="2ShVmc">
+            <ref role="37wK5l" to="kf0m:~OscillatorSetupValues.&lt;init&gt;(double,double,double)" resolve="OscillatorSetupValues" />
+            <node concept="3b6qkQ" id="4RdIakE3W59" role="37wK5m">
+              <property role="$nhwW" value="0.0" />
             </node>
-            <node concept="liA8E" id="oqFRYW3lvy" role="2OqNvi">
-              <ref role="37wK5l" to="guwi:~PrintStream.println(java.lang.String):void" resolve="println" />
-              <node concept="3cpWs3" id="oqFRYW3wvZ" role="37wK5m">
-                <node concept="3cmrfG" id="oqFRYW3wwb" role="3uHU7w">
-                  <property role="3cmrfH" value="2" />
-                  <node concept="17Uvod" id="oqFRYW3wPD" role="lGtFl">
-                    <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                    <property role="2qtEX9" value="value" />
-                    <node concept="3zFVjK" id="oqFRYW3wPG" role="3zH0cK">
-                      <node concept="3clFbS" id="oqFRYW3wPH" role="2VODD2">
-                        <node concept="3clFbF" id="oqFRYW3wPN" role="3cqZAp">
-                          <node concept="2OqwBi" id="oqFRYW3wPI" role="3clFbG">
-                            <node concept="3TrcHB" id="oqFRYW3x9q" role="2OqNvi">
-                              <ref role="3TsBF5" to="juyv:1vU2GvfTsE0" resolve="heigth" />
-                            </node>
-                            <node concept="30H73N" id="oqFRYW3wPM" role="2Oq$k0" />
-                          </node>
+            <node concept="3b6qkQ" id="4RdIakE3W5a" role="37wK5m">
+              <property role="$nhwW" value="1.0" />
+            </node>
+            <node concept="3b6qkQ" id="4RdIakE3W5b" role="37wK5m">
+              <property role="$nhwW" value="0.4" />
+            </node>
+          </node>
+        </node>
+        <node concept="2ShNRf" id="4RdIakE3W5c" role="37wK5m">
+          <node concept="1pGfFk" id="4RdIakE3W5d" role="2ShVmc">
+            <ref role="37wK5l" to="ya33:~BoundaryProperties.&lt;init&gt;(int,int,int,int)" resolve="BoundaryProperties" />
+            <node concept="3cmrfG" id="4RdIakE3W5e" role="37wK5m">
+              <property role="3cmrfH" value="0" />
+              <node concept="17Uvod" id="4RdIakE3X8R" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3X8U" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3X8V" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3X91" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3X8W" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3X8Z" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsDJ" resolve="x" />
                         </node>
+                        <node concept="30H73N" id="4RdIakE3X90" role="2Oq$k0" />
                       </node>
                     </node>
                   </node>
                 </node>
-                <node concept="3cpWs3" id="oqFRYW3w4A" role="3uHU7B">
-                  <node concept="3cmrfG" id="oqFRYW3vUC" role="3uHU7B">
-                    <property role="3cmrfH" value="1" />
-                    <node concept="17Uvod" id="oqFRYW3xfH" role="lGtFl">
-                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                      <property role="2qtEX9" value="value" />
-                      <node concept="3zFVjK" id="oqFRYW3xfK" role="3zH0cK">
-                        <node concept="3clFbS" id="oqFRYW3xfL" role="2VODD2">
-                          <node concept="3clFbF" id="oqFRYW3xfR" role="3cqZAp">
-                            <node concept="2OqwBi" id="oqFRYW3xfM" role="3clFbG">
-                              <node concept="3TrcHB" id="oqFRYW3xfP" role="2OqNvi">
-                                <ref role="3TsBF5" to="juyv:1vU2GvfTsDS" resolve="width" />
-                              </node>
-                              <node concept="30H73N" id="oqFRYW3xfQ" role="2Oq$k0" />
-                            </node>
-                          </node>
+              </node>
+            </node>
+            <node concept="3cmrfG" id="4RdIakE3W5f" role="37wK5m">
+              <property role="3cmrfH" value="0" />
+              <node concept="17Uvod" id="4RdIakE3Xe9" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3Xec" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3Xed" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3Xej" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3Xee" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3Xeh" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsDL" resolve="y" />
                         </node>
+                        <node concept="30H73N" id="4RdIakE3Xei" role="2Oq$k0" />
                       </node>
                     </node>
                   </node>
-                  <node concept="Xl_RD" id="oqFRYW3whm" role="3uHU7w">
-                    <property role="Xl_RC" value="x" />
+                </node>
+              </node>
+            </node>
+            <node concept="3cmrfG" id="4RdIakE3W5g" role="37wK5m">
+              <property role="3cmrfH" value="100" />
+              <node concept="17Uvod" id="4RdIakE3XjP" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3XjS" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3XjT" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3XjZ" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3XjU" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3XjX" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsDS" resolve="width" />
+                        </node>
+                        <node concept="30H73N" id="4RdIakE3XjY" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cmrfG" id="4RdIakE3W5h" role="37wK5m">
+              <property role="3cmrfH" value="100" />
+              <node concept="17Uvod" id="4RdIakE3XpV" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3XpY" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3XpZ" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3Xq5" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3Xq0" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3Xq3" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsE0" resolve="heigth" />
+                        </node>
+                        <node concept="30H73N" id="4RdIakE3Xq4" role="2Oq$k0" />
+                      </node>
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
         </node>
+        <node concept="raruj" id="4RdIakE3X7a" role="lGtFl" />
       </node>
-      <node concept="3eOVzh" id="oqFRYW3laU" role="1Dwp0S">
-        <node concept="3cmrfG" id="oqFRYW3laX" role="3uHU7w">
-          <property role="3cmrfH" value="3" />
-        </node>
-        <node concept="37vLTw" id="oqFRYW3l4z" role="3uHU7B">
-          <ref role="3cqZAo" node="oqFRYW3l3Y" resolve="i" />
-        </node>
-      </node>
-      <node concept="3uNrnE" id="oqFRYW3lhW" role="1Dwrff">
-        <node concept="37vLTw" id="oqFRYW3lhY" role="2$L3a6">
-          <ref role="3cqZAo" node="oqFRYW3l3Y" resolve="i" />
-        </node>
-      </node>
-      <node concept="raruj" id="oqFRYW3lzz" role="lGtFl" />
     </node>
   </node>
-  <node concept="13MO4I" id="1vU2Gvg0TmG">
+  <node concept="13MO4I" id="4RdIakE3XBj">
+    <property role="TrG5h" value="reduce_RotaryKnob" />
+    <ref role="3gUMe" to="juyv:1vU2GvfSuQV" resolve="RotaryKnob" />
+    <node concept="3clFbF" id="4RdIakE3XBN" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE3XBO" role="3clFbG">
+        <ref role="1Pybhc" to="yuee:~OscillatorGUIbuilder" resolve="OscillatorGUIbuilder" />
+        <ref role="37wK5l" to="yuee:~OscillatorGUIbuilder.createRotaryKnobElement(java.lang.String,com.jsyn.unitgen.UnitOscillator,jSyn.lib.general.ControllType,jSyn.lib.oscillator.base.OscillatorSetupValues,jSyn.lib.general.BoundaryProperties):void" resolve="createRotaryKnobElement" />
+        <node concept="Xl_RD" id="4RdIakE3XBP" role="37wK5m">
+          <property role="Xl_RC" value="test" />
+        </node>
+        <node concept="2YIFZM" id="4RdIakE3XBQ" role="37wK5m">
+          <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+          <ref role="37wK5l" to="1rit:~JSynBaseEngine.getOscillatorById(java.lang.String):com.jsyn.unitgen.UnitOscillator" resolve="getOscillatorById" />
+          <node concept="Xl_RD" id="4RdIakE3XBR" role="37wK5m">
+            <property role="Xl_RC" value="test" />
+          </node>
+        </node>
+        <node concept="Rm8GO" id="4RdIakE3XBS" role="37wK5m">
+          <ref role="Rm8GQ" to="ya33:~ControllType.AMPLITUDE" resolve="AMPLITUDE" />
+          <ref role="1Px2BO" to="ya33:~ControllType" resolve="ControllType" />
+        </node>
+        <node concept="2ShNRf" id="4RdIakE3XBT" role="37wK5m">
+          <node concept="1pGfFk" id="4RdIakE3XBU" role="2ShVmc">
+            <ref role="37wK5l" to="kf0m:~OscillatorSetupValues.&lt;init&gt;(double,double,double)" resolve="OscillatorSetupValues" />
+            <node concept="3b6qkQ" id="4RdIakE3XBV" role="37wK5m">
+              <property role="$nhwW" value="0.0" />
+            </node>
+            <node concept="3b6qkQ" id="4RdIakE3XBW" role="37wK5m">
+              <property role="$nhwW" value="1.0" />
+            </node>
+            <node concept="3b6qkQ" id="4RdIakE3XBX" role="37wK5m">
+              <property role="$nhwW" value="0.4" />
+            </node>
+          </node>
+        </node>
+        <node concept="2ShNRf" id="4RdIakE3XBY" role="37wK5m">
+          <node concept="1pGfFk" id="4RdIakE3XBZ" role="2ShVmc">
+            <ref role="37wK5l" to="ya33:~BoundaryProperties.&lt;init&gt;(int,int,int,int)" resolve="BoundaryProperties" />
+            <node concept="3cmrfG" id="4RdIakE3XC0" role="37wK5m">
+              <property role="3cmrfH" value="0" />
+              <node concept="17Uvod" id="4RdIakE3XFW" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3XFZ" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3XG0" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3XG6" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3XG1" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3XG4" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsDJ" resolve="x" />
+                        </node>
+                        <node concept="30H73N" id="4RdIakE3XG5" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cmrfG" id="4RdIakE3XC1" role="37wK5m">
+              <property role="3cmrfH" value="0" />
+              <node concept="17Uvod" id="4RdIakE3XLe" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3XLh" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3XLi" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3XLo" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3XLj" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3XLm" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsDL" resolve="y" />
+                        </node>
+                        <node concept="30H73N" id="4RdIakE3XLn" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cmrfG" id="4RdIakE3XC2" role="37wK5m">
+              <property role="3cmrfH" value="100" />
+              <node concept="17Uvod" id="4RdIakE3XQU" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3XQX" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3XQY" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3XR4" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3XQZ" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3XR2" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsDS" resolve="width" />
+                        </node>
+                        <node concept="30H73N" id="4RdIakE3XR3" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3cmrfG" id="4RdIakE3XC3" role="37wK5m">
+              <property role="3cmrfH" value="100" />
+              <node concept="17Uvod" id="4RdIakE3XX0" role="lGtFl">
+                <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
+                <property role="2qtEX9" value="value" />
+                <node concept="3zFVjK" id="4RdIakE3XX3" role="3zH0cK">
+                  <node concept="3clFbS" id="4RdIakE3XX4" role="2VODD2">
+                    <node concept="3clFbF" id="4RdIakE3XXa" role="3cqZAp">
+                      <node concept="2OqwBi" id="4RdIakE3XX5" role="3clFbG">
+                        <node concept="3TrcHB" id="4RdIakE3XX8" role="2OqNvi">
+                          <ref role="3TsBF5" to="juyv:1vU2GvfTsE0" resolve="heigth" />
+                        </node>
+                        <node concept="30H73N" id="4RdIakE3XX9" role="2Oq$k0" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="raruj" id="4RdIakE3XEf" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3Yan">
+    <property role="TrG5h" value="reduce_FilterBandPass" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNknY" resolve="FilterBandPass" />
+    <node concept="3clFbF" id="4RdIakE3ZEr" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE423i" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE42sS" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE43HL" role="37wK5m">
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.BAND_PASS" resolve="BAND_PASS" />
+        </node>
+        <node concept="raruj" id="4RdIakE43P8" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3YaR">
+    <property role="TrG5h" value="reduce_FilterBandStop" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNkom" resolve="FilterBandStop" />
+    <node concept="3clFbF" id="4RdIakE43Qc" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE43Qd" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE43Qe" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE43Rz" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.BAND_STOP" resolve="BAND_STOP" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE43Qg" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3Ybn">
+    <property role="TrG5h" value="reduce_FilterHighPass" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNqTt" resolve="FilterHighPass" />
+    <node concept="3clFbF" id="4RdIakE43Sp" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE43Sq" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE43Sr" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE43Tw" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.HIGH_PASS" resolve="HIGH_PASS" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE43St" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3YbR">
+    <property role="TrG5h" value="reduce_FilterHighShelf" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNqTP" resolve="FilterHighShelf" />
+    <node concept="3clFbF" id="4RdIakE43U6" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE43U7" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE43U8" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE43Vd" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.HIGH_SELF" resolve="HIGH_SELF" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE43Ua" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3Ycn">
+    <property role="TrG5h" value="reduce_FilterLowPass" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNqUd" resolve="FilterLowPass" />
+    <node concept="3clFbF" id="4RdIakE43VN" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE43VO" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE43VP" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE43Yf" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.LOW_PASS" resolve="LOW_PASS" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE43VR" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3YcR">
+    <property role="TrG5h" value="reduce_FilterLowShelf" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNqU_" resolve="FilterLowShelf" />
+    <node concept="3clFbF" id="4RdIakE43YP" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE43YQ" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE43YR" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE43ZV" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.LOW_SHELF" resolve="LOW_SHELF" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE43YS" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3Ydn">
+    <property role="TrG5h" value="reduce_FilterOnePole" />
+    <ref role="3gUMe" to="juyv:7BQCCwpN1$F" resolve="FilterOnePole" />
+    <node concept="3clFbF" id="4RdIakE440x" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE440y" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE440z" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE441B" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.ONE_POLE" resolve="ONE_POLE" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE440$" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3YdR">
+    <property role="TrG5h" value="reduce_FilterOnePoleOneZero" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNkmN" resolve="FilterOnePoleOneZero" />
+    <node concept="3clFbF" id="4RdIakE442d" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE442e" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE442f" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE443j" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.ONE_POLE_ONE_ZERO" resolve="ONE_POLE_ONE_ZERO" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE442g" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3Yen">
+    <property role="TrG5h" value="reduce_FilterOneZero" />
+    <ref role="3gUMe" to="juyv:7BQCCwpN1$h" resolve="FilterOneZero" />
+    <node concept="3clFbF" id="4RdIakE443T" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE443U" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE443V" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE444Z" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.ONE_ZERO" resolve="ONE_ZERO" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE443W" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3YeR">
+    <property role="TrG5h" value="reduce_FilterTwoPoles" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNkne" resolve="FilterTwoPoles" />
+    <node concept="3clFbF" id="4RdIakE445_" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE445A" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE445B" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE446V" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.TWO_POLES" resolve="TWO_POLES" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE445C" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE3Yfn">
+    <property role="TrG5h" value="reduce_FilterTwoPolesTwoZeros" />
+    <ref role="3gUMe" to="juyv:7BQCCwpNknA" resolve="FilterTwoPolesTwoZeros" />
+    <node concept="3clFbF" id="4RdIakE447x" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE447y" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildUnitFilter(java.lang.String,jSyn.lib.filter.FilterBuilder$FilterType):com.jsyn.unitgen.UnitFilter" resolve="buildUnitFilter" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE447z" role="37wK5m">
+          <property role="Xl_RC" value="bo" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE448B" role="37wK5m">
+          <ref role="Rm8GQ" to="hott:~FilterBuilder$FilterType.TWO_POLES_TWO_ZEROS" resolve="TWO_POLES_TWO_ZEROS" />
+          <ref role="1Px2BO" to="hott:~FilterBuilder$FilterType" resolve="FilterBuilder.FilterType" />
+        </node>
+        <node concept="raruj" id="4RdIakE447$" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE44ev">
+    <property role="TrG5h" value="reduce_ImpulseOscillator" />
+    <ref role="3gUMe" to="juyv:7BQCCwpLxLY" resolve="ImpulseOscillator" />
+    <node concept="3clFbF" id="4RdIakE44hv" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE44hw" role="3clFbG">
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+        <node concept="Xl_RD" id="4RdIakE44hx" role="37wK5m">
+          <property role="Xl_RC" value="test" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE44k5" role="37wK5m">
+          <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.IMPULSE" resolve="IMPULSE" />
+          <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
+        </node>
+        <node concept="raruj" id="4RdIakE44iv" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE44eZ">
+    <property role="TrG5h" value="reduce_PulseOscillator" />
+    <ref role="3gUMe" to="juyv:7BQCCwpMDO9" resolve="PulseOscillator" />
+    <node concept="3clFbF" id="4RdIakE44kF" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE44kG" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE44kH" role="37wK5m">
+          <property role="Xl_RC" value="test" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE44ml" role="37wK5m">
+          <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.PULSE" resolve="PULSE" />
+          <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
+        </node>
+        <node concept="raruj" id="4RdIakE44kI" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE44fv">
     <property role="TrG5h" value="reduce_SawToothOscillator" />
     <ref role="3gUMe" to="juyv:1vU2GvfTsBn" resolve="SawToothOscillator" />
-    <node concept="9aQIb" id="1vU2Gvg0TnA" role="13RCb5">
-      <node concept="3clFbS" id="1vU2Gvg0TnC" role="9aQI4">
-        <node concept="3cpWs8" id="1vU2Gvg1efS" role="3cqZAp">
-          <node concept="3cpWsn" id="1vU2Gvg1efT" role="3cpWs9">
-            <property role="TrG5h" value="lineout" />
-            <node concept="3uibUv" id="1vU2Gvg1efU" role="1tU5fm">
-              <ref role="3uigEE" to="z93d:~LineOut" resolve="LineOut" />
-            </node>
-          </node>
+    <node concept="3clFbF" id="4RdIakE44mV" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE44mW" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE44mX" role="37wK5m">
+          <property role="Xl_RC" value="test" />
         </node>
-        <node concept="3cpWs8" id="1vU2Gvg1ehh" role="3cqZAp">
-          <node concept="3cpWsn" id="1vU2Gvg1ehi" role="3cpWs9">
-            <property role="TrG5h" value="synthesizer" />
-            <node concept="3uibUv" id="1vU2Gvg1ehj" role="1tU5fm">
-              <ref role="3uigEE" to="sei3:~Synthesizer" resolve="Synthesizer" />
-            </node>
-          </node>
+        <node concept="Rm8GO" id="4RdIakE44og" role="37wK5m">
+          <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.SAWTOOTH" resolve="SAWTOOTH" />
+          <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
         </node>
-        <node concept="9aQIb" id="1vU2Gvg1ecQ" role="3cqZAp">
-          <node concept="3clFbS" id="1vU2Gvg1ecR" role="9aQI4">
-            <node concept="3cpWs8" id="1vU2Gvg1ekX" role="3cqZAp">
-              <node concept="3cpWsn" id="1vU2Gvg1ekY" role="3cpWs9">
-                <property role="TrG5h" value="osc" />
-                <node concept="3uibUv" id="1vU2Gvg1ekZ" role="1tU5fm">
-                  <ref role="3uigEE" to="z93d:~UnitOscillator" resolve="UnitOscillator" />
-                </node>
-                <node concept="2ShNRf" id="1vU2Gvg1elC" role="33vP2m">
-                  <node concept="1pGfFk" id="1vU2Gvg1eG9" role="2ShVmc">
-                    <ref role="37wK5l" to="z93d:~SawtoothOscillator.&lt;init&gt;()" resolve="SawtoothOscillator" />
-                  </node>
-                </node>
-                <node concept="17Uvod" id="1vU2Gvg1rKw" role="lGtFl">
-                  <property role="P4ACc" value="ceab5195-25ea-4f22-9b92-103b95ca8c0c/1169194658468/1169194664001" />
-                  <property role="2qtEX9" value="name" />
-                  <node concept="3zFVjK" id="1vU2Gvg1rKz" role="3zH0cK">
-                    <node concept="3clFbS" id="1vU2Gvg1rK$" role="2VODD2">
-                      <node concept="3clFbF" id="1vU2Gvg1rKE" role="3cqZAp">
-                        <node concept="2OqwBi" id="1vU2Gvg1rK_" role="3clFbG">
-                          <node concept="3TrcHB" id="1vU2Gvg1rKC" role="2OqNvi">
-                            <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
-                          </node>
-                          <node concept="30H73N" id="1vU2Gvg1rKD" role="2Oq$k0" />
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="1vU2Gvg1ei0" role="3cqZAp">
-              <node concept="2OqwBi" id="1vU2Gvg1eit" role="3clFbG">
-                <node concept="37vLTw" id="1vU2Gvg1ehZ" role="2Oq$k0">
-                  <ref role="3cqZAo" node="1vU2Gvg1ehi" resolve="synthesizer" />
-                </node>
-                <node concept="liA8E" id="1vU2Gvg1ejD" role="2OqNvi">
-                  <ref role="37wK5l" to="sei3:~Synthesizer.add(com.jsyn.unitgen.UnitGenerator):void" resolve="add" />
-                  <node concept="37vLTw" id="1vU2Gvg1eGO" role="37wK5m">
-                    <ref role="3cqZAo" node="1vU2Gvg1ekY" resolve="osc" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="1vU2Gvg1eHP" role="3cqZAp">
-              <node concept="2OqwBi" id="1vU2Gvg1eUV" role="3clFbG">
-                <node concept="2OqwBi" id="1vU2Gvg1eJx" role="2Oq$k0">
-                  <node concept="37vLTw" id="1vU2Gvg1eHN" role="2Oq$k0">
-                    <ref role="3cqZAo" node="1vU2Gvg1ekY" resolve="osc" />
-                  </node>
-                  <node concept="2OwXpG" id="1vU2Gvg1eQi" role="2OqNvi">
-                    <ref role="2Oxat5" to="z93d:~UnitOscillator.output" resolve="output" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="1vU2Gvg1f1w" role="2OqNvi">
-                  <ref role="37wK5l" to="psr3:~UnitOutputPort.connect(int,com.jsyn.ports.UnitInputPort,int):void" resolve="connect" />
-                  <node concept="3cmrfG" id="1vU2Gvg1f1L" role="37wK5m">
-                    <property role="3cmrfH" value="0" />
-                  </node>
-                  <node concept="2OqwBi" id="1vU2Gvg1fi9" role="37wK5m">
-                    <node concept="37vLTw" id="1vU2Gvg1ffy" role="2Oq$k0">
-                      <ref role="3cqZAo" node="1vU2Gvg1efT" resolve="lineout" />
-                    </node>
-                    <node concept="2OwXpG" id="1vU2Gvg1fpN" role="2OqNvi">
-                      <ref role="2Oxat5" to="z93d:~LineOut.input" resolve="input" />
-                    </node>
-                  </node>
-                  <node concept="3cmrfG" id="1vU2Gvg1fuI" role="37wK5m">
-                    <property role="3cmrfH" value="1" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="1vU2Gvg1f$U" role="3cqZAp">
-              <node concept="2OqwBi" id="1vU2Gvg1fNs" role="3clFbG">
-                <node concept="2OqwBi" id="1vU2Gvg1fBA" role="2Oq$k0">
-                  <node concept="37vLTw" id="1vU2Gvg1f$S" role="2Oq$k0">
-                    <ref role="3cqZAo" node="1vU2Gvg1ekY" resolve="osc" />
-                  </node>
-                  <node concept="2OwXpG" id="1vU2Gvg1fIn" role="2OqNvi">
-                    <ref role="2Oxat5" to="z93d:~UnitOscillator.frequency" resolve="frequency" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="1vU2Gvg1fRN" role="2OqNvi">
-                  <ref role="37wK5l" to="psr3:~UnitInputPort.setup(double,double,double):void" resolve="setup" />
-                  <node concept="3cmrfG" id="1vU2Gvg1fTa" role="37wK5m">
-                    <property role="3cmrfH" value="0" />
-                    <node concept="17Uvod" id="1vU2Gvg1g8e" role="lGtFl">
-                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                      <property role="2qtEX9" value="value" />
-                      <node concept="3zFVjK" id="1vU2Gvg1g8h" role="3zH0cK">
-                        <node concept="3clFbS" id="1vU2Gvg1g8i" role="2VODD2">
-                          <node concept="3clFbF" id="1vU2Gvg1g8o" role="3cqZAp">
-                            <node concept="2OqwBi" id="1vU2Gvg1g8j" role="3clFbG">
-                              <node concept="3TrcHB" id="7BQCCwpMnP4" role="2OqNvi">
-                                <ref role="3TsBF5" to="juyv:7BQCCwpMmkE" resolve="min" />
-                              </node>
-                              <node concept="30H73N" id="1vU2Gvg1g8n" role="2Oq$k0" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3cmrfG" id="1vU2Gvg1g2n" role="37wK5m">
-                    <property role="3cmrfH" value="1" />
-                    <node concept="17Uvod" id="1vU2Gvg1gds" role="lGtFl">
-                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                      <property role="2qtEX9" value="value" />
-                      <node concept="3zFVjK" id="1vU2Gvg1gdv" role="3zH0cK">
-                        <node concept="3clFbS" id="1vU2Gvg1gdw" role="2VODD2">
-                          <node concept="3clFbF" id="1vU2Gvg1gdA" role="3cqZAp">
-                            <node concept="2OqwBi" id="5BYldHS4QFc" role="3clFbG">
-                              <node concept="2OqwBi" id="1vU2Gvg1gdx" role="2Oq$k0">
-                                <node concept="3TrEf2" id="5BYldHS4QsY" role="2OqNvi">
-                                  <ref role="3Tt5mk" to="juyv:5BYldHS4KYU" />
-                                </node>
-                                <node concept="30H73N" id="1vU2Gvg1gd_" role="2Oq$k0" />
-                              </node>
-                              <node concept="3TrcHB" id="5BYldHS5gNX" role="2OqNvi">
-                                <ref role="3TsBF5" to="juyv:5BYldHS5eUE" resolve="value" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                  <node concept="3cmrfG" id="1vU2Gvg1g6P" role="37wK5m">
-                    <property role="3cmrfH" value="2" />
-                    <node concept="17Uvod" id="1vU2Gvg1gj4" role="lGtFl">
-                      <property role="P4ACc" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580320020/1068580320021" />
-                      <property role="2qtEX9" value="value" />
-                      <node concept="3zFVjK" id="1vU2Gvg1gj7" role="3zH0cK">
-                        <node concept="3clFbS" id="1vU2Gvg1gj8" role="2VODD2">
-                          <node concept="3clFbF" id="1vU2Gvg1gje" role="3cqZAp">
-                            <node concept="2OqwBi" id="1vU2Gvg1gj9" role="3clFbG">
-                              <node concept="3TrcHB" id="7BQCCwpMofg" role="2OqNvi">
-                                <ref role="3TsBF5" to="juyv:7BQCCwpMmkG" resolve="max" />
-                              </node>
-                              <node concept="30H73N" id="1vU2Gvg1gjd" role="2Oq$k0" />
-                            </node>
-                          </node>
-                        </node>
-                      </node>
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="raruj" id="1vU2Gvg1meR" role="lGtFl" />
+        <node concept="raruj" id="4RdIakE44mY" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE44fZ">
+    <property role="TrG5h" value="reduce_SineOscillator" />
+    <ref role="3gUMe" to="juyv:7BQCCwpMJBB" resolve="SineOscillator" />
+    <node concept="3clFbF" id="4RdIakE44qK" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE44qL" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE44qM" role="37wK5m">
+          <property role="Xl_RC" value="test" />
         </node>
+        <node concept="Rm8GO" id="4RdIakE44hy" role="37wK5m">
+          <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
+          <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.SINE" resolve="SINE" />
+        </node>
+        <node concept="raruj" id="4RdIakE44qN" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE44gv">
+    <property role="TrG5h" value="reduce_SquareOscillator" />
+    <ref role="3gUMe" to="juyv:7BQCCwpMJBZ" resolve="SquareOscillator" />
+    <node concept="3clFbF" id="4RdIakE44rK" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE44rL" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE44rM" role="37wK5m">
+          <property role="Xl_RC" value="test" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE44tc" role="37wK5m">
+          <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.SQUARE" resolve="SQUARE" />
+          <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
+        </node>
+        <node concept="raruj" id="4RdIakE44rO" role="lGtFl" />
+      </node>
+    </node>
+  </node>
+  <node concept="13MO4I" id="4RdIakE44gZ">
+    <property role="TrG5h" value="reduce_TriangleOscillator" />
+    <ref role="3gUMe" to="juyv:7BQCCwpMJCn" resolve="TriangleOscillator" />
+    <node concept="3clFbF" id="4RdIakE44tM" role="13RCb5">
+      <node concept="2YIFZM" id="4RdIakE44tN" role="3clFbG">
+        <ref role="37wK5l" to="1rit:~JSynBaseEngine.buildOscillator(java.lang.String,jSyn.lib.oscillator.OscillatorBuilder$OscillatorType):com.jsyn.unitgen.UnitOscillator" resolve="buildOscillator" />
+        <ref role="1Pybhc" to="1rit:~JSynBaseEngine" resolve="JSynBaseEngine" />
+        <node concept="Xl_RD" id="4RdIakE44tO" role="37wK5m">
+          <property role="Xl_RC" value="test" />
+        </node>
+        <node concept="Rm8GO" id="4RdIakE44ve" role="37wK5m">
+          <ref role="Rm8GQ" to="hk7t:~OscillatorBuilder$OscillatorType.SQUARE" resolve="SQUARE" />
+          <ref role="1Px2BO" to="hk7t:~OscillatorBuilder$OscillatorType" resolve="OscillatorBuilder.OscillatorType" />
+        </node>
+        <node concept="raruj" id="4RdIakE44tQ" role="lGtFl" />
       </node>
     </node>
   </node>
