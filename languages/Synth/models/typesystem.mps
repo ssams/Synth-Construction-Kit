@@ -19,6 +19,7 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
+      <concept id="1070534058343" name="jetbrains.mps.baseLanguage.structure.NullLiteral" flags="nn" index="10Nm6u" />
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
@@ -27,6 +28,7 @@
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
         <child id="5680397130376446158" name="type" index="1tU5fm" />
       </concept>
+      <concept id="1068580123152" name="jetbrains.mps.baseLanguage.structure.EqualsExpression" flags="nn" index="3clFbC" />
       <concept id="1068580123155" name="jetbrains.mps.baseLanguage.structure.ExpressionStatement" flags="nn" index="3clFbF">
         <child id="1068580123156" name="expression" index="3clFbG" />
       </concept>
@@ -193,6 +195,70 @@
     <node concept="1YaCAy" id="1MkjRcLfAPS" role="1YuTPh">
       <property role="TrG5h" value="sound" />
       <ref role="1YaFvo" to="juyv:1vU2GvfSuQT" resolve="Sound" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="5yMNIuwVYui">
+    <property role="TrG5h" value="check_Slider" />
+    <node concept="3clFbS" id="5yMNIuwVYuj" role="18ibNy">
+      <node concept="3clFbJ" id="5yMNIuwVYuO" role="3cqZAp">
+        <node concept="3clFbC" id="5yMNIuwVYH6" role="3clFbw">
+          <node concept="10Nm6u" id="5yMNIuwVYIc" role="3uHU7w" />
+          <node concept="2OqwBi" id="5yMNIuwVYxp" role="3uHU7B">
+            <node concept="1YBJjd" id="5yMNIuwVYv0" role="2Oq$k0">
+              <ref role="1YBMHb" node="5yMNIuwVYul" resolve="slider" />
+            </node>
+            <node concept="3TrEf2" id="5yMNIuwVYA7" role="2OqNvi">
+              <ref role="3Tt5mk" to="juyv:1MkjRcLaEKs" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbS" id="5yMNIuwVYuQ" role="3clFbx">
+          <node concept="2MkqsV" id="5yMNIuwVYJ5" role="3cqZAp">
+            <node concept="Xl_RD" id="5yMNIuwVYJh" role="2MkJ7o">
+              <property role="Xl_RC" value="Sound-property cannot be null" />
+            </node>
+            <node concept="1YBJjd" id="5yMNIuwVYKd" role="2OEOjV">
+              <ref role="1YBMHb" node="5yMNIuwVYul" resolve="slider" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5yMNIuwVYul" role="1YuTPh">
+      <property role="TrG5h" value="slider" />
+      <ref role="1YaFvo" to="juyv:1vU2GvfTsEb" resolve="Slider" />
+    </node>
+  </node>
+  <node concept="18kY7G" id="5yMNIuwWczZ">
+    <property role="TrG5h" value="check_RotaryKnob" />
+    <node concept="3clFbS" id="5yMNIuwWc$0" role="18ibNy">
+      <node concept="3clFbJ" id="5yMNIuwWcBI" role="3cqZAp">
+        <node concept="3clFbC" id="5yMNIuwWcBJ" role="3clFbw">
+          <node concept="10Nm6u" id="5yMNIuwWcBK" role="3uHU7w" />
+          <node concept="2OqwBi" id="5yMNIuwWcBL" role="3uHU7B">
+            <node concept="1YBJjd" id="5yMNIuwWcDq" role="2Oq$k0">
+              <ref role="1YBMHb" node="5yMNIuwWc$2" resolve="rotaryKnob" />
+            </node>
+            <node concept="3TrEf2" id="5yMNIuwWcBN" role="2OqNvi">
+              <ref role="3Tt5mk" to="juyv:1MkjRcLaEKs" />
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbS" id="5yMNIuwWcBO" role="3clFbx">
+          <node concept="2MkqsV" id="5yMNIuwWcBP" role="3cqZAp">
+            <node concept="Xl_RD" id="5yMNIuwWcBQ" role="2MkJ7o">
+              <property role="Xl_RC" value="Sound-property cannot be null" />
+            </node>
+            <node concept="1YBJjd" id="5yMNIuwWcEJ" role="2OEOjV">
+              <ref role="1YBMHb" node="5yMNIuwWc$2" resolve="rotaryKnob" />
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="1YaCAy" id="5yMNIuwWc$2" role="1YuTPh">
+      <property role="TrG5h" value="rotaryKnob" />
+      <ref role="1YaFvo" to="juyv:1vU2GvfSuQV" resolve="RotaryKnob" />
     </node>
   </node>
 </model>

@@ -107,7 +107,7 @@
     <node concept="1TJgyj" id="1MkjRcLaEKs" role="1TKVEi">
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="soundProperty" />
-      <property role="20lbJX" value="1" />
+      <property role="20lbJX" value="0..1" />
       <ref role="20lvS9" node="5BYldHS5eUD" resolve="SoundProperty" />
     </node>
     <node concept="PrWs8" id="5BYldHS5ThV" role="PzmwI">
@@ -460,6 +460,11 @@
     <node concept="PrWs8" id="1MkjRcL5yGm" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="5yMNIuwVcFj">
+    <property role="1pbfSe" value="106980934" />
+    <property role="TrG5h" value="FilterCB" />
+    <ref role="1TJDcQ" node="1vU2GvfSuQS" resolve="Control" />
   </node>
 </model>
 
