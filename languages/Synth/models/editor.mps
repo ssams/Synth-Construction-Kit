@@ -1361,18 +1361,6 @@
           <property role="Vbekb" value="ITALIC" />
         </node>
       </node>
-      <node concept="3F0ifn" id="7BQCCwpN1zj" role="3EZMnx">
-        <property role="3F0ifm" value="frequency:" />
-        <node concept="pVoyu" id="7BQCCwpN1zy" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-        <node concept="lj46D" id="7BQCCwpN1z_" role="3F10Kt">
-          <property role="VOm3f" value="true" />
-        </node>
-      </node>
-      <node concept="3F1sOY" id="1MkjRcLb3pB" role="3EZMnx">
-        <ref role="1NtTu8" to="juyv:1MkjRcLb3pr" />
-      </node>
       <node concept="3F0ifn" id="1MkjRcLgv6f" role="3EZMnx">
         <property role="3F0ifm" value="" />
         <node concept="pVoyu" id="1MkjRcLgv6n" role="3F10Kt">
