@@ -65,6 +65,7 @@
         <child id="5138809161560788702" name="controls" index="3O2z_E" />
       </concept>
       <concept id="5138809161560904894" name="Synth.structure.Speaker" flags="ng" index="3O3eca" />
+      <concept id="6391398315424795347" name="Synth.structure.FilterCB" flags="ng" index="3SnwgO" />
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
@@ -143,20 +144,35 @@
     </node>
     <node concept="3O2z_Q" id="4tgHViNmRY0" role="3o71IL">
       <node concept="3o6YtW" id="1MkjRcLf73s" role="3O2z_E">
-        <property role="3o7W2C" value="100" />
-        <property role="3o7W2Q" value="100" />
-        <property role="3o7W2Z" value="20" />
-        <property role="3o7W17" value="20" />
+        <property role="3o7W2C" value="49" />
+        <property role="3o7W2Q" value="78" />
+        <property role="3o7W2Z" value="83" />
+        <property role="3o7W17" value="90" />
         <ref role="3O2QYU" node="1MkjRcLeJLm" resolve="highpass" />
         <ref role="HJIdJ" node="1MkjRcLeJLo" resolve="frequency" />
       </node>
       <node concept="3o7W1c" id="1MkjRcLf73x" role="3O2z_E">
-        <property role="3o7W2C" value="200" />
+        <property role="3o7W2C" value="100" />
         <property role="3o7W2Q" value="200" />
-        <property role="3o7W2Z" value="30" />
-        <property role="3o7W17" value="20" />
+        <property role="3o7W2Z" value="127" />
+        <property role="3o7W17" value="82" />
         <ref role="3O2QYU" node="1MkjRcLdh$v" resolve="osc" />
         <ref role="HJIdJ" node="1MkjRcLdh$z" resolve="amplitude" />
+      </node>
+      <node concept="3SnwgO" id="5MwfCnO6VHC" role="3O2z_E">
+        <property role="3o7W2Z" value="100" />
+        <property role="3o7W17" value="87" />
+        <property role="3o7W2C" value="271" />
+        <property role="3o7W2Q" value="174" />
+        <ref role="3O2QYU" node="1MkjRcLfQ5P" resolve="osc2" />
+      </node>
+      <node concept="3o7W1c" id="5MwfCnO6Wh8" role="3O2z_E">
+        <property role="3o7W2Z" value="100" />
+        <property role="3o7W17" value="100" />
+        <property role="3o7W2C" value="258" />
+        <property role="3o7W2Q" value="26" />
+        <ref role="3O2QYU" node="1MkjRcLeJLm" resolve="highpass" />
+        <ref role="HJIdJ" node="1MkjRcLeJLo" resolve="frequency" />
       </node>
     </node>
   </node>
