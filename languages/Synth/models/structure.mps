@@ -464,6 +464,7 @@
   <node concept="1TIwiD" id="5yMNIuwVcFj">
     <property role="1pbfSe" value="106980934" />
     <property role="TrG5h" value="FilterCB" />
+    <property role="34LRSv" value="filter control" />
     <ref role="1TJDcQ" node="1vU2GvfSuQS" resolve="Control" />
   </node>
 </model>

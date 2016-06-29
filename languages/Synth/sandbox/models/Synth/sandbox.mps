@@ -146,7 +146,7 @@
       <node concept="3o6YtW" id="1MkjRcLf73s" role="3O2z_E">
         <property role="3o7W2C" value="49" />
         <property role="3o7W2Q" value="78" />
-        <property role="3o7W2Z" value="83" />
+        <property role="3o7W2Z" value="165" />
         <property role="3o7W17" value="90" />
         <ref role="3O2QYU" node="1MkjRcLeJLm" resolve="highpass" />
         <ref role="HJIdJ" node="1MkjRcLeJLo" resolve="frequency" />
@@ -160,14 +160,14 @@
         <ref role="HJIdJ" node="1MkjRcLdh$z" resolve="amplitude" />
       </node>
       <node concept="3SnwgO" id="5MwfCnO6VHC" role="3O2z_E">
-        <property role="3o7W2Z" value="100" />
+        <property role="3o7W2Z" value="127" />
         <property role="3o7W17" value="87" />
         <property role="3o7W2C" value="271" />
         <property role="3o7W2Q" value="174" />
         <ref role="3O2QYU" node="1MkjRcLfQ5P" resolve="osc2" />
       </node>
       <node concept="3o7W1c" id="5MwfCnO6Wh8" role="3O2z_E">
-        <property role="3o7W2Z" value="100" />
+        <property role="3o7W2Z" value="165" />
         <property role="3o7W17" value="100" />
         <property role="3o7W2C" value="258" />
         <property role="3o7W2Q" value="26" />
