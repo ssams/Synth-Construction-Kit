@@ -43,9 +43,6 @@
       <concept id="1070475926800" name="jetbrains.mps.baseLanguage.structure.StringLiteral" flags="nn" index="Xl_RD">
         <property id="1070475926801" name="value" index="Xl_RC" />
       </concept>
-      <concept id="1081236700937" name="jetbrains.mps.baseLanguage.structure.StaticMethodCall" flags="nn" index="2YIFZM">
-        <reference id="1144433194310" name="classConcept" index="1Pybhc" />
-      </concept>
       <concept id="1068431474542" name="jetbrains.mps.baseLanguage.structure.VariableDeclaration" flags="ng" index="33uBYm">
         <child id="1068431790190" name="initializer" index="33vP2m" />
       </concept>
@@ -66,24 +63,10 @@
       <concept id="1068580123136" name="jetbrains.mps.baseLanguage.structure.StatementList" flags="sn" stub="5293379017992965193" index="3clFbS">
         <child id="1068581517665" name="statement" index="3cqZAp" />
       </concept>
-      <concept id="1068580320020" name="jetbrains.mps.baseLanguage.structure.IntegerConstant" flags="nn" index="3cmrfG">
-        <property id="1068580320021" name="value" index="3cmrfH" />
-      </concept>
-      <concept id="1068581242878" name="jetbrains.mps.baseLanguage.structure.ReturnStatement" flags="nn" index="3cpWs6">
-        <child id="1068581517676" name="expression" index="3cqZAk" />
-      </concept>
       <concept id="1068581242864" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" flags="nn" index="3cpWs8">
         <child id="1068581242865" name="localVariableDeclaration" index="3cpWs9" />
       </concept>
       <concept id="1068581242863" name="jetbrains.mps.baseLanguage.structure.LocalVariableDeclaration" flags="nr" index="3cpWsn" />
-      <concept id="1204053956946" name="jetbrains.mps.baseLanguage.structure.IMethodCall" flags="ng" index="1ndlxa">
-        <reference id="1068499141037" name="baseMethodDeclaration" index="37wK5l" />
-        <child id="1068499141038" name="actualArgument" index="37wK5m" />
-      </concept>
-      <concept id="1212685548494" name="jetbrains.mps.baseLanguage.structure.ClassCreator" flags="nn" index="1pGfFk" />
-      <concept id="1107535904670" name="jetbrains.mps.baseLanguage.structure.ClassifierType" flags="in" index="3uibUv">
-        <reference id="1107535924139" name="classifier" index="3uigEE" />
-      </concept>
       <concept id="1178549954367" name="jetbrains.mps.baseLanguage.structure.IVisible" flags="ng" index="1B3ioH">
         <child id="1178549979242" name="visibility" index="1B3o_S" />
       </concept>
@@ -126,38 +109,6 @@
       <concept id="1160666733551" name="jetbrains.mps.baseLanguage.collections.structure.AddAllElementsOperation" flags="nn" index="X8dFx" />
     </language>
   </registry>
-  <node concept="13h7C7" id="3yVB6mnXhlm">
-    <ref role="13h7C2" to="juyv:1vU2GvfSuQS" resolve="Control" />
-    <node concept="13hLZK" id="3yVB6mnXhln" role="13h7CW">
-      <node concept="3clFbS" id="3yVB6mnXhlo" role="2VODD2" />
-    </node>
-    <node concept="13i0hz" id="3yVB6mnXhmR" role="13h7CS">
-      <property role="TrG5h" value="getPreviewImage" />
-      <node concept="3Tm1VV" id="3yVB6mnXhmS" role="1B3o_S" />
-      <node concept="3uibUv" id="3yVB6mnXhAS" role="3clF45">
-        <ref role="3uigEE" to="6t3d:~ImageData" resolve="ImageData" />
-      </node>
-      <node concept="3clFbS" id="3yVB6mnXhmU" role="3clF47">
-        <node concept="3cpWs6" id="3yVB6mnXhGV" role="3cqZAp">
-          <node concept="2YIFZM" id="3yVB6mnXhIa" role="3cqZAk">
-            <ref role="37wK5l" to="6t3d:~ImageData.emptyImage(jetbrains.jetpad.geometry.Vector):jetbrains.jetpad.projectional.base.ImageData" resolve="emptyImage" />
-            <ref role="1Pybhc" to="6t3d:~ImageData" resolve="ImageData" />
-            <node concept="2ShNRf" id="3yVB6mnXhIr" role="37wK5m">
-              <node concept="1pGfFk" id="3yVB6mnXipM" role="2ShVmc">
-                <ref role="37wK5l" to="g88e:~Vector.&lt;init&gt;(int,int)" resolve="Vector" />
-                <node concept="3cmrfG" id="3yVB6mnXiqb" role="37wK5m">
-                  <property role="3cmrfH" value="0" />
-                </node>
-                <node concept="3cmrfG" id="3yVB6mnXir9" role="37wK5m">
-                  <property role="3cmrfH" value="0" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
-    </node>
-  </node>
   <node concept="13h7C7" id="1MkjRcL7vxD">
     <ref role="13h7C2" to="juyv:1vU2GvfSuQT" resolve="Sound" />
     <node concept="13i0hz" id="1MkjRcLamYg" role="13h7CS">
