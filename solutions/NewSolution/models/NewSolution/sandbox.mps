@@ -73,7 +73,7 @@
     <property role="TrG5h" value="Synth" />
     <node concept="3O2zyO" id="7KfGIju1crw" role="3o71IQ">
       <node concept="3o7WcO" id="7KfGIju1c$B" role="3O2zyC">
-        <ref role="3O2zA7" node="7KfGIjudJas" resolve="asdf" />
+        <ref role="3O2zA7" node="7KfGIjudJas" resolve="sine" />
         <ref role="3O2zAc" node="7KfGIjudIDI" resolve="bass" />
       </node>
       <node concept="3o7WcO" id="7KfGIjudIE6" role="3O2zyC">
@@ -81,7 +81,7 @@
         <ref role="3O2zA7" node="7KfGIjudIDI" resolve="bass" />
       </node>
       <node concept="3o7WcO" id="5yMNIuwMH45" role="3O2zyC">
-        <ref role="3O2zA7" node="5yMNIuwMH3N" resolve="bu" />
+        <ref role="3O2zA7" node="5yMNIuwMH3N" resolve="triangle" />
         <ref role="3O2zAc" node="5yMNIuwUVWu" resolve="low" />
       </node>
       <node concept="3o7WcO" id="5yMNIuwUVWL" role="3O2zyC">
@@ -94,7 +94,7 @@
         <property role="TrG5h" value="speaker" />
       </node>
       <node concept="1wf5HJ" id="7KfGIjudJas" role="3O2z_a">
-        <property role="TrG5h" value="asdf" />
+        <property role="TrG5h" value="sine" />
         <property role="1wfWuy" value="0" />
         <property role="1wfWu$" value="400" />
         <property role="2WLGWy" value="0" />
@@ -123,7 +123,7 @@
         </node>
       </node>
       <node concept="1wf5yv" id="5yMNIuwMH3N" role="3O2z_a">
-        <property role="TrG5h" value="bu" />
+        <property role="TrG5h" value="triangle" />
         <property role="1wfWuy" value="0" />
         <property role="1wfWu$" value="1000" />
         <property role="2WLGWy" value="20" />
@@ -144,7 +144,7 @@
         <property role="3o7W2Q" value="0" />
         <property role="3o7W2Z" value="200" />
         <property role="3o7W17" value="100" />
-        <ref role="3O2QYU" node="7KfGIjudJas" resolve="asdf" />
+        <ref role="3O2QYU" node="7KfGIjudJas" resolve="sine" />
         <ref role="HJIdJ" node="7KfGIjudJau" resolve="frequency" />
       </node>
       <node concept="3o6YtW" id="7KfGIju1rWp" role="3O2z_E">
@@ -152,7 +152,7 @@
         <property role="3o7W2Q" value="0" />
         <property role="3o7W2Z" value="100" />
         <property role="3o7W17" value="100" />
-        <ref role="3O2QYU" node="7KfGIjudJas" resolve="asdf" />
+        <ref role="3O2QYU" node="7KfGIjudJas" resolve="sine" />
         <ref role="HJIdJ" node="7KfGIjudJaw" resolve="amplitude" />
       </node>
       <node concept="3o7W1c" id="5yMNIuwS9HZ" role="3O2z_E">
@@ -160,7 +160,7 @@
         <property role="3o7W2Q" value="100" />
         <property role="3o7W2Z" value="200" />
         <property role="3o7W17" value="100" />
-        <ref role="3O2QYU" node="5yMNIuwMH3N" resolve="bu" />
+        <ref role="3O2QYU" node="5yMNIuwMH3N" resolve="triangle" />
         <ref role="HJIdJ" node="5yMNIuwMH3P" resolve="frequency" />
       </node>
       <node concept="3o6YtW" id="5yMNIuwS9I0" role="3O2z_E">
@@ -168,19 +168,21 @@
         <property role="3o7W2Q" value="100" />
         <property role="3o7W2Z" value="100" />
         <property role="3o7W17" value="100" />
-        <ref role="3O2QYU" node="5yMNIuwMH3N" resolve="bu" />
+        <ref role="3O2QYU" node="5yMNIuwMH3N" resolve="triangle" />
         <ref role="HJIdJ" node="5yMNIuwMH3R" resolve="amplitude" />
       </node>
       <node concept="3SnwgO" id="5yMNIuwVxGM" role="3O2z_E">
         <property role="3o7W2C" value="0" />
         <property role="3o7W2Q" value="200" />
         <property role="3o7W2Z" value="60" />
+        <property role="3o7W17" value="20" />
         <ref role="3O2QYU" node="5yMNIuwUVWu" resolve="low" />
       </node>
       <node concept="3SnwgO" id="6MFRQs2KZ57" role="3O2z_E">
         <property role="3o7W2C" value="0" />
         <property role="3o7W2Q" value="220" />
         <property role="3o7W2Z" value="60" />
+        <property role="3o7W17" value="20" />
         <ref role="3O2QYU" node="7KfGIjudIDI" resolve="bass" />
       </node>
     </node>
